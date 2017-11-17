@@ -1,0 +1,165 @@
+ncvhdl: 15.20-s035: (c) Copyright 1995-2017 Cadence Design Systems, Inc.
+TOOL:	ncvhdl	15.20-s035: Started on Nov 17, 2017 at 17:35:34 EST
+ncvhdl
+    -messages
+    -linedebug
+    -v93
+    -cdslib ../../cds.lib
+    -hdlvar ../../hdl.var
+    -smartorder
+    and2.vhd
+    and3.vhd
+    Counter_Test.vhd
+    Counter.vhd
+    dff_reset.vhd
+    dff.vhd
+    Dlatch_Reset.vhd
+    Dlatch.vhd
+    invX1.vhd
+    mux2_1.vhd
+    nand2.vhd
+    nor2.vhd
+    or2.vhd
+    or3.vhd
+    or4.vhd
+    or5.vhd
+    Output_Enable.vhd
+    rd_wr_hit_miss_reg.vhd
+    SR18.vhd
+    tx.vhd
+    xnor2.vhd
+    xor2.vhd
+
+xor2.vhd:
+	errors: 0, warnings: 0
+xnor2.vhd:
+	errors: 0, warnings: 0
+tx.vhd:
+	errors: 0, warnings: 0
+SR18.vhd:
+	errors: 0, warnings: 0
+rd_wr_hit_miss_reg.vhd:
+	errors: 0, warnings: 0
+Output_Enable.vhd:
+	errors: 0, warnings: 0
+or5.vhd:
+	errors: 0, warnings: 0
+or4.vhd:
+	errors: 0, warnings: 0
+or3.vhd:
+	errors: 0, warnings: 0
+or2.vhd:
+	errors: 0, warnings: 0
+nor2.vhd:
+	errors: 0, warnings: 0
+nand2.vhd:
+	errors: 0, warnings: 0
+mux2_1.vhd:
+	errors: 0, warnings: 0
+invX1.vhd:
+	errors: 0, warnings: 0
+Dlatch_Reset.vhd:
+	errors: 0, warnings: 0
+Dlatch.vhd:
+	errors: 0, warnings: 0
+dff_reset.vhd:
+	errors: 0, warnings: 0
+dff.vhd:
+	errors: 0, warnings: 0
+Counter_Test.vhd:
+	errors: 0, warnings: 0
+Counter.vhd:
+	errors: 0, warnings: 0
+and3.vhd:
+	errors: 0, warnings: 0
+and2.vhd:
+	errors: 0, warnings: 0
+VHDL.XOR2 (entity):
+	streams: 4, words: 56
+VHDL.XOR2:STRUCTURAL (architecture):
+	streams: 1, words: 99
+VHDL.XNOR2 (entity):
+	streams: 4, words: 56
+VHDL.XNOR2:STRUCTURAL (architecture):
+	streams: 1, words: 99
+VHDL.TX (entity):
+	streams: 5, words: 62
+VHDL.TX:STRUCTURAL (architecture):
+	streams: 1, words: 99
+VHDL.SR8 (entity):
+	streams: 6, words: 306
+VHDL.SR8:STRUCTURAL (architecture):
+	streams: 1, words: 343
+VHDL.RD_WR_HIT_MISS_REG (entity):
+	streams: 9, words: 86
+VHDL.RD_WR_HIT_MISS_REG:STRUCTURAL (architecture):
+	streams: 1, words: 199
+VHDL.OUTPUT_ENABLE (entity):
+	streams: 6, words: 484
+VHDL.OUTPUT_ENABLE:STRUCTURAL (architecture):
+	streams: 1, words: 199
+VHDL.OR5 (entity):
+	streams: 7, words: 74
+VHDL.OR5:STRUCTURAL (architecture):
+	streams: 1, words: 199
+VHDL.OR4 (entity):
+	streams: 6, words: 68
+VHDL.OR4:STRUCTURAL (architecture):
+	streams: 1, words: 199
+VHDL.OR3 (entity):
+	streams: 5, words: 62
+VHDL.OR3:STRUCTURAL (architecture):
+	streams: 1, words: 199
+VHDL.OR2 (entity):
+	streams: 4, words: 56
+VHDL.OR2:STRUCTURAL (architecture):
+	streams: 1, words: 99
+VHDL.NOR2 (entity):
+	streams: 4, words: 56
+VHDL.NOR2:STRUCTURAL (architecture):
+	streams: 1, words: 99
+VHDL.NAND2 (entity):
+	streams: 4, words: 56
+VHDL.NAND2:STRUCTURAL (architecture):
+	streams: 1, words: 99
+VHDL.MUX2_1 (entity):
+	streams: 5, words: 62
+VHDL.MUX2_1:STRUCTURAL (architecture):
+	streams: 1, words: 199
+VHDL.INVX1 (entity):
+	streams: 3, words: 50
+VHDL.INVX1:STRUCTURAL (architecture):
+	streams: 1, words: 99
+VHDL.DLATCH_RESET (entity):
+	streams: 6, words: 68
+VHDL.DLATCH_RESET:STRUCTURAL (architecture):
+	streams: 1, words: 210
+VHDL.DLATCH (entity):
+	streams: 5, words: 62
+VHDL.DLATCH:STRUCTURAL (architecture):
+	streams: 1, words: 99
+VHDL.DFF_RESET (entity):
+	streams: 6, words: 68
+VHDL.DFF_RESET:STRUCTURAL (architecture):
+	streams: 1, words: 210
+VHDL.DFF (entity):
+	streams: 5, words: 62
+VHDL.DFF:STRUCTURAL (architecture):
+	streams: 1, words: 99
+VHDL.COUNTER_TEST (entity):
+	streams: 1, words: 38
+VHDL.COUNTER_TEST:TEST (architecture):
+	streams: 1, words: 107
+VHDL.COUNTER (entity):
+	streams: 11, words: 98
+VHDL.COUNTER:STRUCTURAL (architecture):
+	streams: 1, words: 650
+VHDL.AND3 (entity):
+	streams: 5, words: 62
+VHDL.AND3:STRUCTURAL (architecture):
+	streams: 1, words: 199
+VHDL.AND2 (entity):
+	streams: 4, words: 56
+VHDL.AND2:STRUCTURAL (architecture):
+	streams: 1, words: 99
+TOOL:	ncvhdl	15.20-s035: Exiting on Nov 17, 2017 at 17:35:34 EST  (total: 00:00:00)

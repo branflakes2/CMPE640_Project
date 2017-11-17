@@ -1,0 +1,14 @@
+ncsim: 15.20-s035: (c) Copyright 1995-2017 Cadence Design Systems, Inc.
+TOOL:	ncsim	15.20-s035: Started on Nov 17, 2017 at 18:24:39 EST
+ncsim
+    -input ncsim.run
+    -messages
+    -cdslib ../../cds.lib
+    -hdlvar ../../hdl.var
+    Counter_Test
+
+Loading snapshot vhdl.counter_test:test .................... Done
+ncsim> run 300 ns
+Ran until 300 NS + 0
+ncsim> exit
+TOOL:	ncsim	15.20-s035: Exiting on Nov 17, 2017 at 18:24:39 EST  (total: 00:00:00)

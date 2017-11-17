@@ -1,0 +1,19 @@
+ncelab: 15.20-s035: (c) Copyright 1995-2017 Cadence Design Systems, Inc.
+TOOL:	ncelab	15.20-s035: Started on Nov 17, 2017 at 17:35:44 EST
+ncelab
+    -messages
+    -access rwc
+    -cdslib ../../cds.lib
+    -hdlvar ../../hdl.var
+    Counter_Test
+
+ncelab: *W,ARCMRA: Elaborating the VHDL.COUNTER_TEST:TEST, MRA (most recently analyzed) architecture.
+	Elaborating the design hierarchy:
+	Building instance specific data structures.
+	Design hierarchy summary:
+		     Instances  Unique
+		Components:  2       1
+		Processes:   1       1
+		Signals:     1       1
+	Writing initial simulation snapshot: VHDL.COUNTER_TEST:TEST
+TOOL:	ncelab	15.20-s035: Exiting on Nov 17, 2017 at 17:35:44 EST  (total: 00:00:00)
