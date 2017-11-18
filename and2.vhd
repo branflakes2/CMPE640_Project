@@ -12,5 +12,5 @@ end and2;
 
 architecture structural of and2 is
 begin
-    out1 <= in1 and in2 after 1 ns;
+    out1 <= in1 and in2;
 end structural;

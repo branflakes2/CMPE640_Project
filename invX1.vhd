@@ -11,5 +11,5 @@ end invX1;
 
 architecture structural of invX1 is
 begin
-    out1 <= not in1 after 1 ns;
+    out1 <= not in1;
 end structural;

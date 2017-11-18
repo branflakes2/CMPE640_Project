@@ -9,6 +9,8 @@ entity Counter is
         rd_wr       :   in  std_logic;  --1 read 0 write
         start       :   in  std_logic;
         Vdd         :   in  std_logic;
+        Gnd         :   in  std_logic;
+        reset       :   in  std_logic;
         busy        :   out std_logic;
         write_0     :   out std_logic;  --write word0 to cache
         write_1     :   out std_logic;  --write word1 to cache
@@ -25,6 +27,7 @@ architecture structural of Counter is
             hit_miss    :   in  std_logic;
             clk         :   in  std_logic;
             reset       :   in  std_logic;
+            Gnd         :   in  std_logic;
             rd_hit      :   out std_logic;
             wr_hit      :   out std_logic;
             rd_miss     :   out std_logic;
@@ -37,15 +40,17 @@ architecture structural of Counter is
         clk     :   in  std_logic;
         reset   :   in  std_logic;
         Vdd     :   in  std_logic;
+        Gnd     :   in  std_logic;
         output  :   out std_logic_vector(0 to 17)
     );
     end component;
 
-    component Dlatch_Reset
+    component dff_reset_high
     port(
         d       :   in  std_logic;
         clk     :   in  std_logic;
         reset   :   in  std_logic;
+        Gnd     :   in  std_logic;
         q       :   out std_logic;
         qbar    :   out std_logic
     );
@@ -56,6 +61,7 @@ architecture structural of Counter is
         d       :   in  std_logic;
         clk     :   in  std_logic;
         reset   :   in  std_logic;
+        Gnd     :   in  std_logic;
         q       :   out std_logic;
         qbar    :   out std_logic
     );
@@ -113,14 +119,29 @@ architecture structural of Counter is
     );
     end component;
 
+    component srff
+    port(
+        s   :   in  std_logic;
+        r   :   in  std_logic;
+        clk :   in  std_logic;
+        q   :   out std_logic;
+        qbar:   out std_logic
+    );
+    end component;
+
     --rd_wr_hit_miss_reg output signals
     signal r_rd_hit     :   std_logic;
     signal r_wr_hit     :   std_logic;
     signal r_rd_miss    :   std_logic;
     signal r_wr_miss    :   std_logic;
 
-    --busy reset turns on when busy should be set low
-    signal busy_reset   :   std_logic;
+    --busy SR latch signal
+    signal busy_in      :   std_logic;
+
+    --reset signals
+    signal busy_reset   :   std_logic := '0';
+    signal busy_reg_rst :   std_logic;
+    signal sr_reset     :   std_logic;
 
     --logic signals to set busy_reset
     signal wr_miss_or_rd_hit    :   std_logic;
@@ -130,7 +151,11 @@ architecture structural of Counter is
 
     --sr signals
     signal n_busy               :   std_logic;
+    signal enable_clk           :   std_logic;
     signal enabled_clk          :   std_logic;
+    signal nbusy_reg_reset      :   std_logic;
+    signal sr_input             :   std_logic;
+    
     signal count        :   std_logic_vector(0 to 17);
 
     --write signals
@@ -145,11 +170,15 @@ architecture structural of Counter is
 
     --internal busy
     signal busy_internal:   std_logic := '0'; 
+
+    signal done_counting:   std_logic;
 begin
 
     busy <= busy_internal;
 
-    rwrhm_reg   :   rd_wr_hit_miss_reg  port map(rd_wr, hit_miss, clk, busy_reset, r_rd_hit, r_wr_hit, r_rd_miss, r_wr_miss);
+    SR          :   or2     port map(busy_internal, start, busy_in);
+
+    rwrhm_reg   :   rd_wr_hit_miss_reg  port map(rd_wr, hit_miss, clk, busy_reg_rst, Gnd, r_rd_hit, r_wr_hit, r_rd_miss, r_wr_miss);
     not_busy    :   invX1   port map(busy_internal, n_busy);
 
     --logic for resetting busy
@@ -160,13 +189,21 @@ begin
     busy_rst    :   or3     port map(wr_and_clk2, rm_and_clk18, rh_and_clk1, busy_reset);
 
     --enables counting
-    enable      :   and2    port map(clk, busy_internal, enabled_clk);
+    en          :   or3     port map(busy_internal, reset, busy_reset, enable_clk);
+    enable      :   and2    port map(clk, enable_clk, enabled_clk);
 
     --holds busy state
-    busy_reg    :   dff_reset   port map(start, clk, busy_reset, busy_internal, open);
-    
+    busy_reg    :   srff    port map(sr_input, busy_reg_rst, clk, busy_internal, open);
+
     --counts clocks
-    counter     :   SR18    port map(enabled_clk, n_busy, Vdd, count(0 to 17));
+    counter     :   SR18    port map(enabled_clk, n_busy, Vdd, Gnd, count(0 to 17));
+
+    --reset_signals
+    rst_busy    :   or2     port map(busy_reset, reset, busy_reg_rst);
+    rst_sr      :   or2     port map(n_busy, reset, sr_reset);
+
+    nbusy_rst   :   invX1   port map(busy_reg_rst, nbusy_reg_reset);
+    srin        :   and2    port map(nbusy_reg_reset, busy_in, sr_input);
 
     --write signals
     n10         :   invX1   port map(count(10), n_10);

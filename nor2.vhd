@@ -12,5 +12,5 @@ end nor2;
 
 architecture structural of nor2 is
 begin
-    out1 <= in1 nor in2 after 1 ns;
+    out1 <= in1 nor in2;
 end structural;

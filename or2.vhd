@@ -12,5 +12,5 @@ end or2;
 
 architecture structural of or2 is
 begin
-    out1 <= in1 or in2 after 1 ns;
+    out1 <= in1 or in2;
 end structural;

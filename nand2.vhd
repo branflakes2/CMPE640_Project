@@ -12,5 +12,5 @@ end nand2;
 
 architecture structural of nand2 is
 begin
-    out1 <= in1 nand in2 after 1 ns;
+    out1 <= in1 nand in2;
 end structural;

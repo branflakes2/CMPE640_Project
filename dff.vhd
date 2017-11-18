@@ -23,7 +23,7 @@ begin
     output: process                 
     begin                           
         wait until ( clk'EVENT and clk = '0' ); 
-        q <= d after 1 ns;
-        qbar <= not d after 1 ns;
+        q <= d;
+        qbar <= not d;
     end process output;            
 end structural;

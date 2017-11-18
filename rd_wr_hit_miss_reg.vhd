@@ -8,6 +8,7 @@ entity rd_wr_hit_miss_reg is
         hit_miss    :   in  std_logic;
         clk         :   in  std_logic;
         reset       :   in  std_logic;
+        Gnd         :   in  std_logic;
         rd_hit      :   out std_logic;
         wr_hit      :   out std_logic;  
         rd_miss     :   out std_logic;
@@ -17,11 +18,11 @@ end rd_wr_hit_miss_reg;
 
 architecture structural of rd_wr_hit_miss_reg is
 
-    component dff_reset
+    component srff
         port(
-            d       :   in  std_logic;
+            s       :   in  std_logic;
+            r       :   in  std_logic;
             clk     :   in  std_logic;
-            reset   :   in  std_logic;
             q       :   out std_logic;
             qbar    :   out std_logic
         );
@@ -31,6 +32,25 @@ architecture structural of rd_wr_hit_miss_reg is
         port(
             in1     :   in  std_logic;
             in2     :   in  std_logic;
+            out1    :   out std_logic
+        );
+    end component;
+
+    component and4
+        port(
+            in1     :   in  std_logic;
+            in2     :   in  std_logic;
+            in3     :   in  std_logic;
+            in4     :   in  std_logic;
+            out1    :   out std_logic
+        );
+    end component;
+
+    component and3
+        port(
+            in1     :   in  std_logic;
+            in2     :   in  std_logic;
+            in3     :   in  std_logic;
             out1    :   out std_logic
         );
     end component;
@@ -48,20 +68,33 @@ architecture structural of rd_wr_hit_miss_reg is
     signal rmiss        :   std_logic;
     signal whit         :   std_logic;
     signal wmiss        :   std_logic;
+    signal nreset       :   std_logic;
+
+    signal reg1_in      :   std_logic;
+    signal reg2_in      :   std_logic;
+
+    signal latched_rd_wr    :   std_logic;  
+    signal latched_hit_miss :   std_logic;
+
+    signal nclk         :   std_logic;
 
 begin
     
-    inv1    :   invX1       port map(rd_wr, n_rd_wr);
-    inv2    :   invX1       port map(hit_miss, n_hit_miss);
 
-    and_1   :   and2        port map(rd_wr, hit_miss, rhit);
-    and_2   :   and2        port map(n_rd_wr, hit_miss, whit);
-    and_3   :   and2        port map(rd_wr, n_hit_miss, rmiss);
-    and_4   :   and2        port map(n_rd_wr, n_hit_miss, wmiss);
+    inv1    :   invX1       port map(latched_rd_wr, n_rd_wr);
+    inv2    :   invX1       port map(latched_hit_miss, n_hit_miss);
+    nrst    :   invX1       port map(reset, nreset);
+    nc      :   invX1       port map(clk, nclk);
 
-    reg1    :   dff_reset   port map(rhit, clk, reset, rd_hit, open);
-    reg2    :   dff_reset   port map(whit, clk, reset, wr_hit, open);
-    reg3    :   dff_reset   port map(rmiss, clk, reset, rd_miss, open);
-    reg4    :   dff_reset   port map(wmiss, clk, reset, wr_miss, open);
+    and_1   :   and2        port map(latched_rd_wr, latched_hit_miss, rd_hit);
+    and_2   :   and2        port map(n_rd_wr, latched_hit_miss, wr_hit);
+    and_3   :   and2        port map(latched_rd_wr, n_hit_miss, rd_miss);
+    and_4   :   and2        port map(n_rd_wr, n_hit_miss, wr_miss);
+
+    reg1in  :   and2        port map(rd_wr,  nreset, reg1_in);
+    reg2in  :   and2        port map(hit_miss,  nreset, reg2_in);
+
+    reg1    :   srff   port map(reg1_in, reset, clk, latched_rd_wr, open);
+    reg2    :   srff   port map(reg2_in, reset, clk, latched_hit_miss, open);
 
 end structural;
