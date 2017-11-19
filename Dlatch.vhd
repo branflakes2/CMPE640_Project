@@ -19,7 +19,7 @@ begin
 
   begin                           
     if clk = '1' then 
-    q <= d;
+        q <= d;
     qbar <= not d ;
  end if; 
  end process output;        
