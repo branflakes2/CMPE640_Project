@@ -78,7 +78,7 @@ architecture structural of Cache_Cell_Row is
 
 begin
     
-    andtag  :   and2    port map(Tag_Wr_En, Row_Wr_En, Tag_Wr);
+    andtag  :   and2    port map(Tag_Wr_En, Row_En, Tag_Wr);
     valid_s :   and2    port map(Set_Valid, Row_En, Val_Set);
 
     data0   :   Cache_Cell_Data_Block   port map(Data_In, Row_Wr_En, Col0_Wr_En, reset, Gnd, Data_Out, Row_Rd_En, Col0_Rd_En);

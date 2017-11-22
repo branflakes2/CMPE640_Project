@@ -88,8 +88,6 @@ architecture structural of Cache_Block is
 
 begin
 
-    inv     :   invX1   port map(rd_wr, nrdwr);
-    wren    :   and2    port map(wr_en, enable, Write);
 
     and_0   :   and2    port map(rd_wr, Col_En(0), Col0_Rd_En);
     and_1   :   and2    port map(rd_wr, Col_En(1), Col1_Rd_En);

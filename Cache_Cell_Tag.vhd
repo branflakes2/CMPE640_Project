@@ -59,8 +59,8 @@ begin
 
     nrd     :   invX1       port map(Row_En, nRd_En);
 
-    cell0   :   Cache_Cell  port map(Data(0), Wr_En, reset, Gnd, Output(0), Row_En, nRd_En);
-    cell1   :   Cache_Cell  port map(Data(1), Wr_En, reset, Gnd, Output(1), Row_En, nRd_En);
-    cell2   :   Cache_Cell  port map(Data(2), Wr_En, reset, Gnd, Output(2), Row_En, nRd_En);
+    cell0   :   Cache_Cell  port map(Data(0), Tag_Wr, reset, Gnd, Output(0), Row_En, nRd_En);
+    cell1   :   Cache_Cell  port map(Data(1), Tag_Wr, reset, Gnd, Output(1), Row_En, nRd_En);
+    cell2   :   Cache_Cell  port map(Data(2), Tag_Wr, reset, Gnd, Output(2), Row_En, nRd_En);
     
 end structural;

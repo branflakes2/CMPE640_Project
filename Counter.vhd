@@ -13,11 +13,11 @@ entity Counter is
         reset       :   in  std_logic;
         busy        :   out std_logic;
         rd_wr_o     :   out std_logic;
-        cache_write :   out std_logic;
-        rm_wr_en    :   out std_logic;    
+        cache_write :   out std_logic; --pulses for one clock to write to cache
+        rm_wr_en    :   out std_logic; --disables decoder output while writing from memory   
         wr_hit      :   out std_logic;
-        cpu_dout_en :   out std_logic;
-        mem_enable  :   out std_logic;
+        cpu_dout_en :   out std_logic; --enables output to data bus
+        mem_enable  :   out std_logic; --signals memory to start sending data
         write_0     :   out std_logic;  --write word0 to cache
         write_1     :   out std_logic;  --write word1 to cache
         write_2     :   out std_logic;  --write word2 to cache
