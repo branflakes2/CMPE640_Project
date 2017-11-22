@@ -20,6 +20,8 @@ architecture test of Counter_Test is
         Gnd         :   in  std_logic;
         reset       :   in  std_logic;
         busy        :   out std_logic;
+        cpu_dout_en :   out std_logic;
+        mem_enable  :   out std_logic;
         write_0     :   out std_logic;  --write word0 to cache
         write_1     :   out std_logic;  --write word1 to cache
         write_2     :   out std_logic;  --write word2 to cache
@@ -29,10 +31,12 @@ architecture test of Counter_Test is
 
     signal s_clk        :   std_logic := '1';
     signal s_hit_miss   :   std_logic := '0';
-    signal s_rd_wr      :   std_logic := '0';
+    signal s_rd_wr      :   std_logic := 'Z';
     signal s_start      :   std_logic := '0';
-    signal s_reset      :   std_logic := '0';
+    signal s_reset      :   std_logic := 'Z';
     signal s_busy       :   std_logic := '0';
+    signal s_cpu_dout_en:   std_logic;
+    signal s_mem_enable :   std_logic;
     signal s_write_0    :   std_logic := '0';
     signal s_write_1    :   std_logic := '0';
     signal s_write_2    :   std_logic := '0';
@@ -51,6 +55,8 @@ begin
         Gnd         =>  '0',
         reset       =>  s_reset,
         busy        =>  s_busy,
+        cpu_dout_en =>  s_cpu_dout_en,
+        mem_enable  =>  s_mem_enable,
         write_0     =>  s_write_0,
         write_1     =>  s_write_1,
         write_2     =>  s_write_2,
@@ -83,15 +89,21 @@ begin
         s_reset     <= '1';
         wait for 20 ns;
         s_reset     <= '0';
+        wait for 10 ns;
         s_rd_wr     <= '1';
         s_start     <= '1';
         wait for 10 ns;
-        s_rd_wr     <= '0';
+        s_rd_wr     <= 'Z';
+        s_start     <= '0';
+        s_hit_miss  <= '0';
+        wait for 190 ns;
+        s_start     <= '1';
+        s_rd_wr     <= '1'; 
+        wait for 10 ns;
+        s_rd_wr     <= 'Z';
         s_start     <= '0';
         s_hit_miss  <= '1';
-        wait for 300 ns;
-
-        wait for 30 ns;
+        wait for 100 ns;
         done := true;        
         wait;
     end process;

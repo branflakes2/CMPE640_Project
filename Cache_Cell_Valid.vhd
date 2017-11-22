@@ -55,6 +55,6 @@ begin
     or1 :   or2     port map(Rd_En, Wr_En, out_en);
     inv :   invX1   port map(out_en, nRd_En);
     sr  :   SRlatch port map(s, r, q1);
-    t   :   tx      port map(Rd_En, nRd_En, q1, q);
+    t   :   tx      port map(out_en, nRd_En, q1, q);
 
 end structural;

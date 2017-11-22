@@ -12,6 +12,10 @@ entity Counter is
         Gnd         :   in  std_logic;
         reset       :   in  std_logic;
         busy        :   out std_logic;
+        rd_wr_o     :   out std_logic;
+        rd_miss     :   out std_logic;
+        cpu_dout_en :   out std_logic;
+        mem_enable  :   out std_logic;
         write_0     :   out std_logic;  --write word0 to cache
         write_1     :   out std_logic;  --write word1 to cache
         write_2     :   out std_logic;  --write word2 to cache
@@ -24,10 +28,13 @@ architecture structural of Counter is
     component rd_wr_hit_miss_reg is
         port(
             rd_wr       :   in  std_logic;
+            rd_wr_set_en:   in  std_logic;
             hit_miss    :   in  std_logic;
+            hit_miss_en :   in  std_logic;
             clk         :   in  std_logic;
             reset       :   in  std_logic;
             Gnd         :   in  std_logic;
+            rd_wr_o     :   out std_logic;
             rd_hit      :   out std_logic;
             wr_hit      :   out std_logic;
             rd_miss     :   out std_logic;
@@ -103,6 +110,14 @@ architecture structural of Counter is
     );
     end component;
 
+    component xor2
+    port(
+        in1     :   in  std_logic;
+        in2     :   in  std_logic;
+        out1    :   out std_logic
+    );
+    end component;
+
     component and3
     port(
         in1     :   in  std_logic;
@@ -135,6 +150,11 @@ architecture structural of Counter is
     signal r_rd_miss    :   std_logic;
     signal r_wr_miss    :   std_logic;
 
+
+    --hit miss latch signals
+    signal hm_latch     :   std_logic;
+    signal ncount1      :   std_logic;
+
     --busy SR latch signal
     signal busy_in      :   std_logic;
 
@@ -159,6 +179,7 @@ architecture structural of Counter is
     signal count        :   std_logic_vector(0 to 17);
 
     --write signals
+    signal n_1          :   std_logic;
     signal n_10         :   std_logic;
     signal n_12         :   std_logic;
     signal n_14         :   std_logic;
@@ -172,13 +193,22 @@ architecture structural of Counter is
     signal busy_internal:   std_logic := '0'; 
 
     signal done_counting:   std_logic;
+
+    signal rd_operation :   std_logic;
+    signal cdout_en     :   std_logic;    
+    signal s_mem_enable :   std_logic;
+
+    signal r_rd_wr      :   std_logic;
+    signal read_miss_wr :   std_logic;
 begin
 
     busy <= busy_internal;
 
+    rd_miss <= count(8);
+
     SR          :   or2     port map(busy_internal, start, busy_in);
 
-    rwrhm_reg   :   rd_wr_hit_miss_reg  port map(rd_wr, hit_miss, clk, busy_reg_rst, Gnd, r_rd_hit, r_wr_hit, r_rd_miss, r_wr_miss);
+    rwrhm_reg   :   rd_wr_hit_miss_reg  port map(rd_wr, start, hit_miss, hm_latch, clk, reset, Gnd, rd_wr_o, r_rd_hit, r_wr_hit, r_rd_miss, r_wr_miss);
     not_busy    :   invX1   port map(busy_internal, n_busy);
 
     --logic for resetting busy
@@ -221,4 +251,14 @@ begin
     w2out       :   and2    port map(w2, n_14, write_2);
     w3out       :   and2    port map(w3, n_16, write_3);
 
+    rd_op       :   or2     port map(r_rd_miss, r_rd_hit, rd_operation);
+    dout_set_en :   and2    port map(busy_reset, rd_operation, cdout_en);
+    dout_en     :   dff_reset   port map(cdout_en, clk, reset, Gnd, cpu_dout_en, open);
+
+    nc1         :   invX1   port map(count(1), n_1);
+    mem_en      :   and3    port map(count(0), r_rd_miss, n_1, s_mem_enable);
+    mem_en_reg  :   dff_reset   port map(s_mem_enable, clk, reset, Gnd, mem_enable, open);
+
+    --hit_miss_latch signals
+    hml         :   and2    port map(count(0), n_1, hm_latch);
 end structural;

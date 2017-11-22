@@ -1,28 +1,19 @@
-library STD;
 library IEEE;
-use IEEE.std_logic_1164.all;
+use IEEE.STD_LOGIC_1164.ALL;
 
 entity SRlatch is
-    port(
-        s   :   in  std_logic;
-        r   :   in  std_logic;
-        q   :   out std_logic
-    );
+    Port ( s : in    STD_LOGIC;
+           r : in    STD_LOGIC;
+           q : out STD_LOGIC); -- changed out to inout
 end SRlatch;
 
 architecture structural of SRlatch is
-
+signal notQ : STD_LOGIC;
+signal q2   :   std_logic;
 begin
 
-    p   :   process(s, r)
-    begin
-        if s = '1' and r = '0' then
-            q   <= '1';
-        elsif s = '0' and r = '1' then
-            q   <= '0';
-        elsif s = '1' and r = '1' then
-            q   <= 'U';
-        end if;
-    end process;
-end structural;
+q <= q2;
+q2    <= r nor notQ;
+notQ <= s nor q2;
 
+end structural;

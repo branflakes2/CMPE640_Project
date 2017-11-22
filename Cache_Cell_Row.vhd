@@ -6,6 +6,7 @@ entity Cache_Cell_Row is
     port(
         Data_In     :   in  std_logic_vector(7 downto 0);
         Tag_In      :   in  std_logic_vector(2 downto 0);
+        Set_Valid   :   in  std_logic;
         Col0_Rd_En  :   in  std_logic;
         Col1_Rd_En  :   in  std_logic;
         Col2_Rd_En  :   in  std_logic;
@@ -17,6 +18,7 @@ entity Cache_Cell_Row is
         Tag_Wr_En   :   in  std_logic;
         Row_Rd_En   :   in  std_logic;
         Row_Wr_En   :   in  std_logic;
+        Row_En      :   in  std_logic;
         Gnd         :   in  std_logic;
         reset       :   in  std_logic;
         Data_Out    :   out std_logic_vector(7 downto 0);
@@ -70,19 +72,13 @@ architecture structural of Cache_Cell_Row is
     );
     end component;
 
-    signal Wr_En0   :   std_logic;
-    signal Wr_En1   :   std_logic;
-    signal Wr_En2   :   std_logic;
-    signal Wr_En3   :   std_logic;
-    signal Rd_En0   :   std_logic;
-    signal Rd_En1   :   std_logic;
-    signal Rd_En2   :   std_logic;
-    signal Rd_En3   :   std_logic;
     signal Tag_Wr   :   std_logic;
-      
+    signal Val_Set  :   std_logic;
+
 begin
     
     andtag  :   and2    port map(Tag_Wr_En, Row_Wr_En, Tag_Wr);
+    valid_s :   and2    port map(Set_Valid, Row_En, Val_Set);
 
     data0   :   Cache_Cell_Data_Block   port map(Data_In, Row_Wr_En, Col0_Wr_En, reset, Gnd, Data_Out, Row_Rd_En, Col0_Rd_En);
     data1   :   Cache_Cell_Data_Block   port map(Data_In, Row_Wr_En, Col1_Wr_En, reset, Gnd, Data_Out, Row_Rd_En, Col1_Rd_En);
@@ -91,6 +87,6 @@ begin
 
     tag     :   Cache_Cell_Tag          port map(Tag_In, Row_Wr_En, Tag_Wr, reset, Gnd, Tag_Out, Row_Rd_En);
     
-    valid   :   Cache_Cell_Valid        port map(Row_Wr_En, reset, Row_Wr_En, Row_Wr_En, Valid_Out);
+    valid   :   Cache_Cell_Valid        port map(Val_Set, reset, Row_Rd_En, Row_Wr_En, Valid_Out);
 
 end structural;
