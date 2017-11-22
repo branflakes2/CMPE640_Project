@@ -10,7 +10,8 @@ entity Cache_Cell_Tag is
         reset   :   in  std_logic;
         Gnd     :   in  std_logic;
         Output  :   out std_logic_vector(2 downto 0);
-        Rd_En   :   in  std_logic  --row rd enable
+        Rd_En   :   in  std_logic;  --row rd enable
+        Row_En  :   in  std_logic
     ); 
 end Cache_Cell_Tag;                          
 
@@ -53,16 +54,13 @@ architecture structural of Cache_Cell_Tag is
 
     signal Wr_En    :   std_logic;
     signal nRd_En   :   std_logic;
-    signal out_en   :   std_logic;
 
 begin
 
-    and_1   :   and2        port map(Tag_Wr, W_En_r, Wr_En);
-    or_1    :   or2         port map(W_En_r, Rd_En, out_en);
-    nrd     :   invX1       port map(out_en, nRd_En);
+    nrd     :   invX1       port map(Row_En, nRd_En);
 
-    cell0   :   Cache_Cell  port map(Data(0), Wr_En, reset, Gnd, Output(0), out_en, nRd_En);
-    cell1   :   Cache_Cell  port map(Data(1), Wr_En, reset, Gnd, Output(1), out_en, nRd_En);
-    cell2   :   Cache_Cell  port map(Data(2), Wr_En, reset, Gnd, Output(2), out_en, nRd_En);
+    cell0   :   Cache_Cell  port map(Data(0), Wr_En, reset, Gnd, Output(0), Row_En, nRd_En);
+    cell1   :   Cache_Cell  port map(Data(1), Wr_En, reset, Gnd, Output(1), Row_En, nRd_En);
+    cell2   :   Cache_Cell  port map(Data(2), Wr_En, reset, Gnd, Output(2), Row_En, nRd_En);
     
 end structural;

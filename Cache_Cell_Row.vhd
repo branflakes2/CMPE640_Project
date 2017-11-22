@@ -47,7 +47,8 @@ architecture structural of Cache_Cell_Row is
         reset   :   in  std_logic;
         Gnd     :   in  std_logic;
         Output  :   out std_logic_vector(2 downto 0);
-        Rd_En   :   in  std_logic
+        Rd_En   :   in  std_logic;
+        Row_En  :   in  std_logic
     );
     end component;
         
@@ -85,8 +86,8 @@ begin
     data2   :   Cache_Cell_Data_Block   port map(Data_In, Row_Wr_En, Col2_Wr_En, reset, Gnd, Data_Out, Row_Rd_En, Col2_Rd_En);
     data3   :   Cache_Cell_Data_Block   port map(Data_In, Row_Wr_En, Col3_Wr_En, reset, Gnd, Data_Out, Row_Rd_En, Col3_Rd_En);
 
-    tag     :   Cache_Cell_Tag          port map(Tag_In, Row_Wr_En, Tag_Wr, reset, Gnd, Tag_Out, Row_Rd_En);
+    tag     :   Cache_Cell_Tag          port map(Tag_In, Row_Wr_En, Tag_Wr, reset, Gnd, Tag_Out, Row_Rd_En, Row_En);
     
-    valid   :   Cache_Cell_Valid        port map(Val_Set, reset, Row_Rd_En, Row_Wr_En, Valid_Out);
+    valid   :   Cache_Cell_Valid        port map(Val_Set, reset, Row_En, Row_En, Valid_Out);
 
 end structural;

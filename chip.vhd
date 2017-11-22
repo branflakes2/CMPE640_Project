@@ -32,7 +32,9 @@ architecture structural of chip is
         reset       :   in  std_logic;
         busy        :   out std_logic;
         rd_wr_o     :   out std_logic;
-        rd_miss     :   out std_logic;
+        cache_write :   out std_logic;
+        rm_wr_en    :   out std_logic;
+        wr_hit      :   out std_logic;
         cpu_dout_en :   out std_logic;
         mem_enable  :   out std_logic;
         write_0     :   out std_logic;  --write word0 to cache
@@ -48,7 +50,7 @@ architecture structural of chip is
         Tag_In      :   in  std_logic_vector(2 downto 0);
         Set_Valid   :   in  std_logic;
         Rd_Wr       :   in  std_logic;
-        Rd_Miss     :   in  std_logic;
+        Cache_Write :   in  std_logic;
         Col_En      :   in  std_logic_vector(3 downto 0);
         Row_En      :   in  std_logic_vector(7 downto 0);
         Tag_Wr_En   :   in  std_logic;
@@ -178,6 +180,12 @@ architecture structural of chip is
     signal delayed_rm       :   std_logic;
 
     signal reset_nor_start  :   std_logic;
+    
+    signal wr_hit           :   std_logic;
+    signal wr_on_wr_hit     :   std_logic_vector(3 downto 0);
+    signal wr_on_rd_miss    :   std_logic_vector(3 downto 0);
+    signal cache_write      :   std_logic;
+    signal rm_wr_en         :   std_logic;
 begin
 
     busy        <=  internal_busy;
@@ -186,9 +194,9 @@ begin
     data_reg    :   register8   port map(cpu_data, reg_clk_en, reset, Gnd, data_reg_out);
     addr_reg    :   register8   port map(cpu_add, reg_clk_en, reset, Gnd, addr_reg_out);   
     decode      :   Decoder     port map(addr_reg_out(4 downto 0), col_dec_out, row_dec_out);
-    cache       :   Cache_Block port map(data_bus, addr_reg_out(7 downto 5), w0, rdwr, delayed_rm, col_en, row_dec_out, w0, Gnd, reset, internal_busy, cache_data_out, cache_tag_out, cache_valid_out);
+    cache       :   Cache_Block port map(data_bus, addr_reg_out(7 downto 5), w0, rdwr, cache_write, col_en, row_dec_out, w0, Gnd, reset, internal_busy, cache_data_out, cache_tag_out, cache_valid_out);
     hm          :   Hit_Miss    port map(addr_reg_out(7 downto 5), cache_tag_out, cache_valid_out, hitmiss);
-    state       :   Counter     port map(clk, hitmiss, cpu_rd_wrn, start, Vdd, Gnd, reset, internal_busy, rdwr, delayed_rm, dout_en, aout_en, w0, w1, w2, w3);
+    state       :   Counter     port map(clk, hitmiss, cpu_rd_wrn, start, Vdd, Gnd, reset, internal_busy, rdwr, cache_write, rm_wr_en, wr_hit, dout_en, aout_en, w0, w1, w2, w3);
     outen0      : Output_Enable port map(cache_data_out, dout_en, cpu_data);
     outen1      : Output_Enable port map(addr_reg_out, aout_en, mem_add); 
 
@@ -202,7 +210,7 @@ begin
     --column enable signals for cache
     nrm         :   invX1       port map(rd_miss, nrd_miss);
     nb          :   invX1       port map(internal_busy, nbusy);
-    oen         :   nand2       port map(delayed_rm, internal_busy, e);
+    oen         :   nand2       port map(rm_wr_en, internal_busy, e);
     rm0         :   and2        port map(e, col_dec_out(0), col_dec_en(0));
     rm1         :   and2        port map(e, col_dec_out(1), col_dec_en(1));
     rm2         :   and2        port map(e, col_dec_out(2), col_dec_en(2));
@@ -211,6 +219,10 @@ begin
     colen1      :   or2         port map(w1, col_dec_en(1), col_en(1));
     colen2      :   or2         port map(w2, col_dec_en(2), col_en(2));
     colen3      :   or2         port map(w3, col_dec_en(3), col_en(3));
+    colen_wr0   :   and2        port map(wr_hit,  col_dec_out(0), wr_on_wr_hit(0));
+    colen_wr1   :   and2        port map(wr_hit,  col_dec_out(1), wr_on_wr_hit(1));
+    colen_wr2   :   and2        port map(wr_hit,  col_dec_out(2), wr_on_wr_hit(2));
+    colen_wr3   :   and2        port map(wr_hit,  col_dec_out(3), wr_on_wr_hit(3));
 
     outen2      :   Output_Enable   port map(data_reg_out, nrdwr, data_bus);
 

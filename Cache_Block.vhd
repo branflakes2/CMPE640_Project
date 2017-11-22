@@ -8,7 +8,7 @@ entity Cache_Block is
         Tag_In      :   in  std_logic_vector(2 downto 0);
         Set_Valid   :   in  std_logic;
         Rd_Wr       :   in  std_logic;
-        Rd_Miss     :   in  std_logic;
+        Cache_Write :   in  std_logic;
         Col_En      :   in  std_logic_vector(3 downto 0);
         Row_En      :   in  std_logic_vector(7 downto 0);
         Tag_Wr_En   :   in  std_logic;
@@ -89,17 +89,16 @@ architecture structural of Cache_Block is
 begin
 
     inv     :   invX1   port map(rd_wr, nrdwr);
-    wr      :   or2     port map(nrdwr, Rd_Miss, wr_en);
     wren    :   and2    port map(wr_en, enable, Write);
 
     and_0   :   and2    port map(rd_wr, Col_En(0), Col0_Rd_En);
     and_1   :   and2    port map(rd_wr, Col_En(1), Col1_Rd_En);
     and_2   :   and2    port map(rd_wr, Col_En(2), Col2_Rd_En);
     and_3   :   and2    port map(rd_wr, Col_En(3), Col3_Rd_En);
-    and_4   :   and2    port map(Write, Col_En(0), Col0_Wr_En);
-    and_5   :   and2    port map(Write, Col_En(1), Col1_Wr_En);
-    and_6   :   and2    port map(Write, Col_En(2), Col2_Wr_En);
-    and_7   :   and2    port map(Write, Col_En(3), Col3_Wr_En);
+    and_4   :   and2    port map(Cache_Write, Col_En(0), Col0_Wr_En);
+    and_5   :   and2    port map(Cache_Write, Col_En(1), Col1_Wr_En);
+    and_6   :   and2    port map(Cache_Write, Col_En(2), Col2_Wr_En);
+    and_7   :   and2    port map(Cache_Write, Col_En(3), Col3_Wr_En);
     
     r0r     :   and2    port map(Row_En(0), rd_wr, Row_Read(0));
     r1r     :   and2    port map(Row_En(1), rd_wr, Row_Read(1));
@@ -110,14 +109,14 @@ begin
     r6r     :   and2    port map(Row_En(6), rd_wr, Row_Read(6));
     r7r     :   and2    port map(Row_En(7), rd_wr, Row_Read(7));
 
-    r0w     :   and2    port map(Row_En(0), Write, Row_Write(0));
-    r1w     :   and2    port map(Row_En(1), Write, Row_Write(1));
-    r2w     :   and2    port map(Row_En(2), Write, Row_Write(2));
-    r3w     :   and2    port map(Row_En(3), Write, Row_Write(3));
-    r4w     :   and2    port map(Row_En(4), Write, Row_Write(4));
-    r5w     :   and2    port map(Row_En(5), Write, Row_Write(5));
-    r6w     :   and2    port map(Row_En(6), Write, Row_Write(6));
-    r7w     :   and2    port map(Row_En(7), Write, Row_Write(7));
+    r0w     :   and2    port map(Row_En(0), Cache_Write, Row_Write(0));
+    r1w     :   and2    port map(Row_En(1), Cache_Write, Row_Write(1));
+    r2w     :   and2    port map(Row_En(2), Cache_Write, Row_Write(2));
+    r3w     :   and2    port map(Row_En(3), Cache_Write, Row_Write(3));
+    r4w     :   and2    port map(Row_En(4), Cache_Write, Row_Write(4));
+    r5w     :   and2    port map(Row_En(5), Cache_Write, Row_Write(5));
+    r6w     :   and2    port map(Row_En(6), Cache_Write, Row_Write(6));
+    r7w     :   and2    port map(Row_En(7), Cache_Write, Row_Write(7));
 
     row0    :   Cache_Cell_Row  port map(Data_In, Tag_In, Set_Valid, Col0_Rd_En, Col1_Rd_En, Col2_Rd_En, Col3_Rd_En, Col0_Wr_En, Col1_Wr_En, Col2_Wr_En, Col3_Wr_en, Tag_Wr_En, Row_Read(0), Row_Write(0), Row_En(0), Gnd, reset, Data_Out, Tag_Out, Valid_Out);
     row1    :   Cache_Cell_Row  port map(Data_In, Tag_In, Set_Valid, Col0_Rd_En, Col1_Rd_En, Col2_Rd_En, Col3_Rd_En, Col0_Wr_En, Col1_Wr_En, Col2_Wr_En, Col3_Wr_en, Tag_Wr_En, Row_Read(1), Row_Write(1), Row_En(1), Gnd, reset, Data_Out, Tag_Out, Valid_Out);

@@ -13,7 +13,9 @@ entity Counter is
         reset       :   in  std_logic;
         busy        :   out std_logic;
         rd_wr_o     :   out std_logic;
-        rd_miss     :   out std_logic;
+        cache_write :   out std_logic;
+        rm_wr_en    :   out std_logic;    
+        wr_hit      :   out std_logic;
         cpu_dout_en :   out std_logic;
         mem_enable  :   out std_logic;
         write_0     :   out std_logic;  --write word0 to cache
@@ -184,6 +186,7 @@ architecture structural of Counter is
     signal n_12         :   std_logic;
     signal n_14         :   std_logic;
     signal n_16         :   std_logic;
+    signal n_17         :   std_logic;
     signal w0           :   std_logic;
     signal w1           :   std_logic;
     signal w2           :   std_logic;
@@ -200,11 +203,22 @@ architecture structural of Counter is
 
     signal r_rd_wr      :   std_logic;
     signal read_miss_wr :   std_logic;
+
+    signal cache_wr0    :   std_logic;
+    signal cache_wr1    :   std_logic;
+    signal cache_wr2    :   std_logic;
+    signal cache_wr_hit :   std_logic;
+
 begin
 
     busy <= busy_internal;
 
-    rd_miss <= count(8);
+    --cache write logic
+    rm_write0   :   or2     port map(w0, w1, cache_wr0);
+    rm_write1   :   or2     port map(w2, w3, cache_wr1);
+    wh_write    :   and3    port map(r_wr_hit, count(0), n_1, cache_wr_hit);
+    cache_wr    :   or3     port map(cache_wr0, cache_wr1, cache_wr_hit, cache_write);
+    wr_rm       :   and2    port map(count(7), n_17, rm_wr_en);    
 
     SR          :   or2     port map(busy_internal, start, busy_in);
 
@@ -240,16 +254,17 @@ begin
     n12         :   invX1   port map(count(12), n_12);
     n14         :   invX1   port map(count(14), n_14);
     n16         :   invX1   port map(count(16), n_16);
+    n17         :   invX1   port map(count(17), n_17);
 
-    wr0         :   and2    port map(r_rd_miss, count(9), w0);
-    wr1         :   and2    port map(r_rd_miss, count(11), w1);
-    wr2         :   and2    port map(r_rd_miss, count(13), w2);
-    wr3         :   and2    port map(r_rd_miss, count(15), w3);
+    w0out       :   and2    port map(count(9), n_10, w0);
+    w1out       :   and2    port map(count(11), n_12, w1);
+    w2out       :   and2    port map(count(13), n_14, w2);
+    w3out       :   and2    port map(count(15), n_16, w3);
 
-    w0out       :   and2    port map(w0, n_10, write_0);
-    w1out       :   and2    port map(w1, n_12, write_1);
-    w2out       :   and2    port map(w2, n_14, write_2);
-    w3out       :   and2    port map(w3, n_16, write_3);
+    write_0 <=  w0;
+    write_1 <=  w1;
+    write_2 <=  w2;
+    write_3 <=  w3;
 
     rd_op       :   or2     port map(r_rd_miss, r_rd_hit, rd_operation);
     dout_set_en :   and2    port map(busy_reset, rd_operation, cdout_en);
@@ -258,6 +273,8 @@ begin
     nc1         :   invX1   port map(count(1), n_1);
     mem_en      :   and3    port map(count(0), r_rd_miss, n_1, s_mem_enable);
     mem_en_reg  :   dff_reset   port map(s_mem_enable, clk, reset, Gnd, mem_enable, open);
+
+    write_wh    :   and3    port map(r_wr_hit, count(0), n_1, wr_hit);
 
     --hit_miss_latch signals
     hml         :   and2    port map(count(0), n_1, hm_latch);
