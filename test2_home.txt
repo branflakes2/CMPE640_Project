@@ -1,0 +1,679 @@
+ Clock: 1 Start: 0 Cpu Read/Write: Z Reset: 1
+ CPU address: ZZZZZZZZ CPU data: ZZZZZZZZ
+ Memory data: ZZZZZZZZ
+
+ Busy: 0 Memory  Enable: 0
+ Memory  Address: ZZZZZZZZ
+ ----------------------------------------------
+ Clock: 4 Start: 1 Cpu Read/Write: 1 Reset: 0
+ CPU address: 00000000 CPU data: ZZZZZZZZ
+ Memory data: ZZZZZZZZ
+
+ Busy: 1 Memory  Enable: 0
+ Memory  Address: ZZZZZZZZ
+ ----------------------------------------------
+ Clock: 5 Start: 0 Cpu Read/Write: Z Reset: 0
+ CPU address: ZZZZZZZZ CPU data: ZZZZZZZZ
+ Memory data: ZZZZZZZZ
+
+ Busy: 1 Memory  Enable: 1
+ Memory  Address: 00000000
+ ----------------------------------------------
+ Clock: 6 Start: 0 Cpu Read/Write: Z Reset: 0
+ CPU address: ZZZZZZZZ CPU data: ZZZZZZZZ
+ Memory data: ZZZZZZZZ
+
+ Busy: 1 Memory  Enable: 0
+ Memory  Address: ZZZZZZZZ
+ ----------------------------------------------
+ Clock: 22 Start: 0 Cpu Read/Write: Z Reset: 0
+ CPU address: ZZZZZZZZ CPU data: 00000000
+ Memory data: ZZZZZZZZ
+
+ Busy: 0 Memory  Enable: 0
+ Memory  Address: ZZZZZZZZ
+ ----------------------------------------------
+ Clock: 24 Start: 1 Cpu Read/Write: 1 Reset: 0
+ CPU address: 00100101 CPU data: ZZZZZZZZ
+ Memory data: ZZZZZZZZ
+
+ Busy: 1 Memory  Enable: 0
+ Memory  Address: ZZZZZZZZ
+ ----------------------------------------------
+ Clock: 25 Start: 0 Cpu Read/Write: Z Reset: 0
+ CPU address: ZZZZZZZZ CPU data: ZZZZZZZZ
+ Memory data: ZZZZZZZZ
+
+ Busy: 1 Memory  Enable: 1
+ Memory  Address: 00100101
+ ----------------------------------------------
+ Clock: 26 Start: 0 Cpu Read/Write: Z Reset: 0
+ CPU address: ZZZZZZZZ CPU data: ZZZZZZZZ
+ Memory data: ZZZZZZZZ
+
+ Busy: 1 Memory  Enable: 0
+ Memory  Address: ZZZZZZZZ
+ ----------------------------------------------
+ Clock: 42 Start: 0 Cpu Read/Write: Z Reset: 0
+ CPU address: ZZZZZZZZ CPU data: 00010001
+ Memory data: ZZZZZZZZ
+
+ Busy: 0 Memory  Enable: 0
+ Memory  Address: ZZZZZZZZ
+ ----------------------------------------------
+ Clock: 44 Start: 1 Cpu Read/Write: 1 Reset: 0
+ CPU address: 01001010 CPU data: ZZZZZZZZ
+ Memory data: ZZZZZZZZ
+
+ Busy: 1 Memory  Enable: 0
+ Memory  Address: ZZZZZZZZ
+ ----------------------------------------------
+ Clock: 45 Start: 0 Cpu Read/Write: Z Reset: 0
+ CPU address: ZZZZZZZZ CPU data: ZZZZZZZZ
+ Memory data: ZZZZZZZZ
+
+ Busy: 1 Memory  Enable: 1
+ Memory  Address: 01001010
+ ----------------------------------------------
+ Clock: 46 Start: 0 Cpu Read/Write: Z Reset: 0
+ CPU address: ZZZZZZZZ CPU data: ZZZZZZZZ
+ Memory data: ZZZZZZZZ
+
+ Busy: 1 Memory  Enable: 0
+ Memory  Address: ZZZZZZZZ
+ ----------------------------------------------
+ Clock: 62 Start: 0 Cpu Read/Write: Z Reset: 0
+ CPU address: ZZZZZZZZ CPU data: 00100010
+ Memory data: ZZZZZZZZ
+
+ Busy: 0 Memory  Enable: 0
+ Memory  Address: ZZZZZZZZ
+ ----------------------------------------------
+ Clock: 64 Start: 1 Cpu Read/Write: 1 Reset: 0
+ CPU address: 01101111 CPU data: ZZZZZZZZ
+ Memory data: ZZZZZZZZ
+
+ Busy: 1 Memory  Enable: 0
+ Memory  Address: ZZZZZZZZ
+ ----------------------------------------------
+ Clock: 65 Start: 0 Cpu Read/Write: Z Reset: 0
+ CPU address: ZZZZZZZZ CPU data: ZZZZZZZZ
+ Memory data: ZZZZZZZZ
+
+ Busy: 1 Memory  Enable: 1
+ Memory  Address: 01101111
+ ----------------------------------------------
+ Clock: 66 Start: 0 Cpu Read/Write: Z Reset: 0
+ CPU address: ZZZZZZZZ CPU data: ZZZZZZZZ
+ Memory data: ZZZZZZZZ
+
+ Busy: 1 Memory  Enable: 0
+ Memory  Address: ZZZZZZZZ
+ ----------------------------------------------
+ Clock: 82 Start: 0 Cpu Read/Write: Z Reset: 0
+ CPU address: ZZZZZZZZ CPU data: 00110011
+ Memory data: ZZZZZZZZ
+
+ Busy: 0 Memory  Enable: 0
+ Memory  Address: ZZZZZZZZ
+ ----------------------------------------------
+ Clock: 84 Start: 1 Cpu Read/Write: 1 Reset: 0
+ CPU address: 10010000 CPU data: ZZZZZZZZ
+ Memory data: ZZZZZZZZ
+
+ Busy: 1 Memory  Enable: 0
+ Memory  Address: ZZZZZZZZ
+ ----------------------------------------------
+ Clock: 85 Start: 0 Cpu Read/Write: Z Reset: 0
+ CPU address: ZZZZZZZZ CPU data: ZZZZZZZZ
+ Memory data: ZZZZZZZZ
+
+ Busy: 1 Memory  Enable: 1
+ Memory  Address: 10010000
+ ----------------------------------------------
+ Clock: 86 Start: 0 Cpu Read/Write: Z Reset: 0
+ CPU address: ZZZZZZZZ CPU data: ZZZZZZZZ
+ Memory data: ZZZZZZZZ
+
+ Busy: 1 Memory  Enable: 0
+ Memory  Address: ZZZZZZZZ
+ ----------------------------------------------
+ Clock: 102 Start: 0 Cpu Read/Write: Z Reset: 0
+ CPU address: ZZZZZZZZ CPU data: 01000000
+ Memory data: ZZZZZZZZ
+
+ Busy: 0 Memory  Enable: 0
+ Memory  Address: ZZZZZZZZ
+ ----------------------------------------------
+ Clock: 104 Start: 1 Cpu Read/Write: 1 Reset: 0
+ CPU address: 10110101 CPU data: ZZZZZZZZ
+ Memory data: ZZZZZZZZ
+
+ Busy: 1 Memory  Enable: 0
+ Memory  Address: ZZZZZZZZ
+ ----------------------------------------------
+ Clock: 105 Start: 0 Cpu Read/Write: Z Reset: 0
+ CPU address: ZZZZZZZZ CPU data: ZZZZZZZZ
+ Memory data: ZZZZZZZZ
+
+ Busy: 1 Memory  Enable: 1
+ Memory  Address: 10110101
+ ----------------------------------------------
+ Clock: 106 Start: 0 Cpu Read/Write: Z Reset: 0
+ CPU address: ZZZZZZZZ CPU data: ZZZZZZZZ
+ Memory data: ZZZZZZZZ
+
+ Busy: 1 Memory  Enable: 0
+ Memory  Address: ZZZZZZZZ
+ ----------------------------------------------
+ Clock: 122 Start: 0 Cpu Read/Write: Z Reset: 0
+ CPU address: ZZZZZZZZ CPU data: 01010001
+ Memory data: ZZZZZZZZ
+
+ Busy: 0 Memory  Enable: 0
+ Memory  Address: ZZZZZZZZ
+ ----------------------------------------------
+ Clock: 124 Start: 1 Cpu Read/Write: 1 Reset: 0
+ CPU address: 11011010 CPU data: ZZZZZZZZ
+ Memory data: ZZZZZZZZ
+
+ Busy: 1 Memory  Enable: 0
+ Memory  Address: ZZZZZZZZ
+ ----------------------------------------------
+ Clock: 125 Start: 0 Cpu Read/Write: Z Reset: 0
+ CPU address: ZZZZZZZZ CPU data: ZZZZZZZZ
+ Memory data: ZZZZZZZZ
+
+ Busy: 1 Memory  Enable: 1
+ Memory  Address: 11011010
+ ----------------------------------------------
+ Clock: 126 Start: 0 Cpu Read/Write: Z Reset: 0
+ CPU address: ZZZZZZZZ CPU data: ZZZZZZZZ
+ Memory data: ZZZZZZZZ
+
+ Busy: 1 Memory  Enable: 0
+ Memory  Address: ZZZZZZZZ
+ ----------------------------------------------
+ Clock: 142 Start: 0 Cpu Read/Write: Z Reset: 0
+ CPU address: ZZZZZZZZ CPU data: 01100010
+ Memory data: ZZZZZZZZ
+
+ Busy: 0 Memory  Enable: 0
+ Memory  Address: ZZZZZZZZ
+ ----------------------------------------------
+ Clock: 144 Start: 1 Cpu Read/Write: 1 Reset: 0
+ CPU address: 11111111 CPU data: ZZZZZZZZ
+ Memory data: ZZZZZZZZ
+
+ Busy: 1 Memory  Enable: 0
+ Memory  Address: ZZZZZZZZ
+ ----------------------------------------------
+ Clock: 145 Start: 0 Cpu Read/Write: Z Reset: 0
+ CPU address: ZZZZZZZZ CPU data: ZZZZZZZZ
+ Memory data: ZZZZZZZZ
+
+ Busy: 1 Memory  Enable: 1
+ Memory  Address: 11111111
+ ----------------------------------------------
+ Clock: 146 Start: 0 Cpu Read/Write: Z Reset: 0
+ CPU address: ZZZZZZZZ CPU data: ZZZZZZZZ
+ Memory data: ZZZZZZZZ
+
+ Busy: 1 Memory  Enable: 0
+ Memory  Address: ZZZZZZZZ
+ ----------------------------------------------
+ Clock: 162 Start: 0 Cpu Read/Write: Z Reset: 0
+ CPU address: ZZZZZZZZ CPU data: 01110011
+ Memory data: ZZZZZZZZ
+
+ Busy: 0 Memory  Enable: 0
+ Memory  Address: ZZZZZZZZ
+ ----------------------------------------------
+ Clock: 164 Start: 1 Cpu Read/Write: 0 Reset: 0
+ CPU address: 00000000 CPU data: 00001100
+ Memory data: ZZZZZZZZ
+
+ Busy: 1 Memory  Enable: 0
+ Memory  Address: ZZZZZZZZ
+ ----------------------------------------------
+ Clock: 166 Start: 0 Cpu Read/Write: Z Reset: 0
+ CPU address: ZZZZZZZZ CPU data: ZZZZZZZZ
+ Memory data: ZZZZZZZZ
+
+ Busy: 0 Memory  Enable: 0
+ Memory  Address: ZZZZZZZZ
+ ----------------------------------------------
+ Clock: 168 Start: 1 Cpu Read/Write: 0 Reset: 0
+ CPU address: 00100101 CPU data: 00011100
+ Memory data: ZZZZZZZZ
+
+ Busy: 1 Memory  Enable: 0
+ Memory  Address: ZZZZZZZZ
+ ----------------------------------------------
+ Clock: 170 Start: 0 Cpu Read/Write: Z Reset: 0
+ CPU address: ZZZZZZZZ CPU data: ZZZZZZZZ
+ Memory data: ZZZZZZZZ
+
+ Busy: 0 Memory  Enable: 0
+ Memory  Address: ZZZZZZZZ
+ ----------------------------------------------
+ Clock: 172 Start: 1 Cpu Read/Write: 0 Reset: 0
+ CPU address: 01001010 CPU data: 00101100
+ Memory data: ZZZZZZZZ
+
+ Busy: 1 Memory  Enable: 0
+ Memory  Address: ZZZZZZZZ
+ ----------------------------------------------
+ Clock: 174 Start: 0 Cpu Read/Write: Z Reset: 0
+ CPU address: ZZZZZZZZ CPU data: ZZZZZZZZ
+ Memory data: ZZZZZZZZ
+
+ Busy: 0 Memory  Enable: 0
+ Memory  Address: ZZZZZZZZ
+ ----------------------------------------------
+ Clock: 176 Start: 1 Cpu Read/Write: 0 Reset: 0
+ CPU address: 01101111 CPU data: 00111100
+ Memory data: ZZZZZZZZ
+
+ Busy: 1 Memory  Enable: 0
+ Memory  Address: ZZZZZZZZ
+ ----------------------------------------------
+ Clock: 178 Start: 0 Cpu Read/Write: Z Reset: 0
+ CPU address: ZZZZZZZZ CPU data: ZZZZZZZZ
+ Memory data: ZZZZZZZZ
+
+ Busy: 0 Memory  Enable: 0
+ Memory  Address: ZZZZZZZZ
+ ----------------------------------------------
+ Clock: 180 Start: 1 Cpu Read/Write: 0 Reset: 0
+ CPU address: 10010000 CPU data: 01001111
+ Memory data: ZZZZZZZZ
+
+ Busy: 1 Memory  Enable: 0
+ Memory  Address: ZZZZZZZZ
+ ----------------------------------------------
+ Clock: 182 Start: 0 Cpu Read/Write: Z Reset: 0
+ CPU address: ZZZZZZZZ CPU data: ZZZZZZZZ
+ Memory data: ZZZZZZZZ
+
+ Busy: 0 Memory  Enable: 0
+ Memory  Address: ZZZZZZZZ
+ ----------------------------------------------
+ Clock: 184 Start: 1 Cpu Read/Write: 0 Reset: 0
+ CPU address: 10110101 CPU data: 01011111
+ Memory data: ZZZZZZZZ
+
+ Busy: 1 Memory  Enable: 0
+ Memory  Address: ZZZZZZZZ
+ ----------------------------------------------
+ Clock: 186 Start: 0 Cpu Read/Write: Z Reset: 0
+ CPU address: ZZZZZZZZ CPU data: ZZZZZZZZ
+ Memory data: ZZZZZZZZ
+
+ Busy: 0 Memory  Enable: 0
+ Memory  Address: ZZZZZZZZ
+ ----------------------------------------------
+ Clock: 188 Start: 1 Cpu Read/Write: 0 Reset: 0
+ CPU address: 11011010 CPU data: 01101111
+ Memory data: ZZZZZZZZ
+
+ Busy: 1 Memory  Enable: 0
+ Memory  Address: ZZZZZZZZ
+ ----------------------------------------------
+ Clock: 190 Start: 0 Cpu Read/Write: Z Reset: 0
+ CPU address: ZZZZZZZZ CPU data: ZZZZZZZZ
+ Memory data: ZZZZZZZZ
+
+ Busy: 0 Memory  Enable: 0
+ Memory  Address: ZZZZZZZZ
+ ----------------------------------------------
+ Clock: 192 Start: 1 Cpu Read/Write: 0 Reset: 0
+ CPU address: 11111111 CPU data: 01111111
+ Memory data: ZZZZZZZZ
+
+ Busy: 1 Memory  Enable: 0
+ Memory  Address: ZZZZZZZZ
+ ----------------------------------------------
+ Clock: 194 Start: 0 Cpu Read/Write: Z Reset: 0
+ CPU address: ZZZZZZZZ CPU data: ZZZZZZZZ
+ Memory data: ZZZZZZZZ
+
+ Busy: 0 Memory  Enable: 0
+ Memory  Address: ZZZZZZZZ
+ ----------------------------------------------
+ Clock: 196 Start: 1 Cpu Read/Write: 1 Reset: 0
+ CPU address: 00000000 CPU data: ZZZZZZZZ
+ Memory data: ZZZZZZZZ
+
+ Busy: 1 Memory  Enable: 0
+ Memory  Address: ZZZZZZZZ
+ ----------------------------------------------
+ Clock: 197 Start: 0 Cpu Read/Write: Z Reset: 0
+ CPU address: ZZZZZZZZ CPU data: 00001100
+ Memory data: ZZZZZZZZ
+
+ Busy: 0 Memory  Enable: 0
+ Memory  Address: ZZZZZZZZ
+ ----------------------------------------------
+ Clock: 199 Start: 1 Cpu Read/Write: 1 Reset: 0
+ CPU address: 00100101 CPU data: ZZZZZZZZ
+ Memory data: ZZZZZZZZ
+
+ Busy: 1 Memory  Enable: 0
+ Memory  Address: ZZZZZZZZ
+ ----------------------------------------------
+ Clock: 200 Start: 0 Cpu Read/Write: Z Reset: 0
+ CPU address: ZZZZZZZZ CPU data: 00011100
+ Memory data: ZZZZZZZZ
+
+ Busy: 0 Memory  Enable: 0
+ Memory  Address: ZZZZZZZZ
+ ----------------------------------------------
+ Clock: 202 Start: 1 Cpu Read/Write: 1 Reset: 0
+ CPU address: 01001010 CPU data: ZZZZZZZZ
+ Memory data: ZZZZZZZZ
+
+ Busy: 1 Memory  Enable: 0
+ Memory  Address: ZZZZZZZZ
+ ----------------------------------------------
+ Clock: 203 Start: 0 Cpu Read/Write: Z Reset: 0
+ CPU address: ZZZZZZZZ CPU data: 00101100
+ Memory data: ZZZZZZZZ
+
+ Busy: 0 Memory  Enable: 0
+ Memory  Address: ZZZZZZZZ
+ ----------------------------------------------
+ Clock: 205 Start: 1 Cpu Read/Write: 1 Reset: 0
+ CPU address: 01101111 CPU data: ZZZZZZZZ
+ Memory data: ZZZZZZZZ
+
+ Busy: 1 Memory  Enable: 0
+ Memory  Address: ZZZZZZZZ
+ ----------------------------------------------
+ Clock: 206 Start: 0 Cpu Read/Write: Z Reset: 0
+ CPU address: ZZZZZZZZ CPU data: 00111100
+ Memory data: ZZZZZZZZ
+
+ Busy: 0 Memory  Enable: 0
+ Memory  Address: ZZZZZZZZ
+ ----------------------------------------------
+ Clock: 208 Start: 1 Cpu Read/Write: 1 Reset: 0
+ CPU address: 10010000 CPU data: ZZZZZZZZ
+ Memory data: ZZZZZZZZ
+
+ Busy: 1 Memory  Enable: 0
+ Memory  Address: ZZZZZZZZ
+ ----------------------------------------------
+ Clock: 209 Start: 0 Cpu Read/Write: Z Reset: 0
+ CPU address: ZZZZZZZZ CPU data: 01001111
+ Memory data: ZZZZZZZZ
+
+ Busy: 0 Memory  Enable: 0
+ Memory  Address: ZZZZZZZZ
+ ----------------------------------------------
+ Clock: 211 Start: 1 Cpu Read/Write: 1 Reset: 0
+ CPU address: 10110101 CPU data: ZZZZZZZZ
+ Memory data: ZZZZZZZZ
+
+ Busy: 1 Memory  Enable: 0
+ Memory  Address: ZZZZZZZZ
+ ----------------------------------------------
+ Clock: 212 Start: 0 Cpu Read/Write: Z Reset: 0
+ CPU address: ZZZZZZZZ CPU data: 01011111
+ Memory data: ZZZZZZZZ
+
+ Busy: 0 Memory  Enable: 0
+ Memory  Address: ZZZZZZZZ
+ ----------------------------------------------
+ Clock: 214 Start: 1 Cpu Read/Write: 1 Reset: 0
+ CPU address: 11011010 CPU data: ZZZZZZZZ
+ Memory data: ZZZZZZZZ
+
+ Busy: 1 Memory  Enable: 0
+ Memory  Address: ZZZZZZZZ
+ ----------------------------------------------
+ Clock: 215 Start: 0 Cpu Read/Write: Z Reset: 0
+ CPU address: ZZZZZZZZ CPU data: 01101111
+ Memory data: ZZZZZZZZ
+
+ Busy: 0 Memory  Enable: 0
+ Memory  Address: ZZZZZZZZ
+ ----------------------------------------------
+ Clock: 217 Start: 1 Cpu Read/Write: 1 Reset: 0
+ CPU address: 11111111 CPU data: ZZZZZZZZ
+ Memory data: ZZZZZZZZ
+
+ Busy: 1 Memory  Enable: 0
+ Memory  Address: ZZZZZZZZ
+ ----------------------------------------------
+ Clock: 218 Start: 0 Cpu Read/Write: Z Reset: 0
+ CPU address: ZZZZZZZZ CPU data: 01111111
+ Memory data: ZZZZZZZZ
+
+ Busy: 0 Memory  Enable: 0
+ Memory  Address: ZZZZZZZZ
+ ----------------------------------------------
+ Clock: 220 Start: 1 Cpu Read/Write: 0 Reset: 0
+ CPU address: 11100000 CPU data: 00000000
+ Memory data: ZZZZZZZZ
+
+ Busy: 1 Memory  Enable: 0
+ Memory  Address: ZZZZZZZZ
+ ----------------------------------------------
+ Clock: 222 Start: 0 Cpu Read/Write: Z Reset: 0
+ CPU address: ZZZZZZZZ CPU data: ZZZZZZZZ
+ Memory data: ZZZZZZZZ
+
+ Busy: 0 Memory  Enable: 0
+ Memory  Address: ZZZZZZZZ
+ ----------------------------------------------
+ Clock: 224 Start: 1 Cpu Read/Write: 0 Reset: 0
+ CPU address: 00000101 CPU data: 00000000
+ Memory data: ZZZZZZZZ
+
+ Busy: 1 Memory  Enable: 0
+ Memory  Address: ZZZZZZZZ
+ ----------------------------------------------
+ Clock: 226 Start: 0 Cpu Read/Write: Z Reset: 0
+ CPU address: ZZZZZZZZ CPU data: ZZZZZZZZ
+ Memory data: ZZZZZZZZ
+
+ Busy: 0 Memory  Enable: 0
+ Memory  Address: ZZZZZZZZ
+ ----------------------------------------------
+ Clock: 228 Start: 1 Cpu Read/Write: 0 Reset: 0
+ CPU address: 00001010 CPU data: 00000000
+ Memory data: ZZZZZZZZ
+
+ Busy: 1 Memory  Enable: 0
+ Memory  Address: ZZZZZZZZ
+ ----------------------------------------------
+ Clock: 230 Start: 0 Cpu Read/Write: Z Reset: 0
+ CPU address: ZZZZZZZZ CPU data: ZZZZZZZZ
+ Memory data: ZZZZZZZZ
+
+ Busy: 0 Memory  Enable: 0
+ Memory  Address: ZZZZZZZZ
+ ----------------------------------------------
+ Clock: 232 Start: 1 Cpu Read/Write: 0 Reset: 0
+ CPU address: 00001111 CPU data: 00000000
+ Memory data: ZZZZZZZZ
+
+ Busy: 1 Memory  Enable: 0
+ Memory  Address: ZZZZZZZZ
+ ----------------------------------------------
+ Clock: 234 Start: 0 Cpu Read/Write: Z Reset: 0
+ CPU address: ZZZZZZZZ CPU data: ZZZZZZZZ
+ Memory data: ZZZZZZZZ
+
+ Busy: 0 Memory  Enable: 0
+ Memory  Address: ZZZZZZZZ
+ ----------------------------------------------
+ Clock: 236 Start: 1 Cpu Read/Write: 0 Reset: 0
+ CPU address: 00010000 CPU data: 00000000
+ Memory data: ZZZZZZZZ
+
+ Busy: 1 Memory  Enable: 0
+ Memory  Address: ZZZZZZZZ
+ ----------------------------------------------
+ Clock: 238 Start: 0 Cpu Read/Write: Z Reset: 0
+ CPU address: ZZZZZZZZ CPU data: ZZZZZZZZ
+ Memory data: ZZZZZZZZ
+
+ Busy: 0 Memory  Enable: 0
+ Memory  Address: ZZZZZZZZ
+ ----------------------------------------------
+ Clock: 240 Start: 1 Cpu Read/Write: 0 Reset: 0
+ CPU address: 00010101 CPU data: 00000000
+ Memory data: ZZZZZZZZ
+
+ Busy: 1 Memory  Enable: 0
+ Memory  Address: ZZZZZZZZ
+ ----------------------------------------------
+ Clock: 242 Start: 0 Cpu Read/Write: Z Reset: 0
+ CPU address: ZZZZZZZZ CPU data: ZZZZZZZZ
+ Memory data: ZZZZZZZZ
+
+ Busy: 0 Memory  Enable: 0
+ Memory  Address: ZZZZZZZZ
+ ----------------------------------------------
+ Clock: 244 Start: 1 Cpu Read/Write: 0 Reset: 0
+ CPU address: 00011010 CPU data: 00000000
+ Memory data: ZZZZZZZZ
+
+ Busy: 1 Memory  Enable: 0
+ Memory  Address: ZZZZZZZZ
+ ----------------------------------------------
+ Clock: 246 Start: 0 Cpu Read/Write: Z Reset: 0
+ CPU address: ZZZZZZZZ CPU data: ZZZZZZZZ
+ Memory data: ZZZZZZZZ
+
+ Busy: 0 Memory  Enable: 0
+ Memory  Address: ZZZZZZZZ
+ ----------------------------------------------
+ Clock: 248 Start: 1 Cpu Read/Write: 0 Reset: 0
+ CPU address: 00011111 CPU data: 00000000
+ Memory data: ZZZZZZZZ
+
+ Busy: 1 Memory  Enable: 0
+ Memory  Address: ZZZZZZZZ
+ ----------------------------------------------
+ Clock: 250 Start: 0 Cpu Read/Write: Z Reset: 0
+ CPU address: ZZZZZZZZ CPU data: ZZZZZZZZ
+ Memory data: ZZZZZZZZ
+
+ Busy: 0 Memory  Enable: 0
+ Memory  Address: ZZZZZZZZ
+ ----------------------------------------------
+ Clock: 252 Start: 1 Cpu Read/Write: 1 Reset: 0
+ CPU address: 00000000 CPU data: ZZZZZZZZ
+ Memory data: ZZZZZZZZ
+
+ Busy: 1 Memory  Enable: 0
+ Memory  Address: ZZZZZZZZ
+ ----------------------------------------------
+ Clock: 253 Start: 0 Cpu Read/Write: Z Reset: 0
+ CPU address: ZZZZZZZZ CPU data: 00000000
+ Memory data: ZZZZZZZZ
+
+ Busy: 0 Memory  Enable: 0
+ Memory  Address: ZZZZZZZZ
+ ----------------------------------------------
+ Clock: 255 Start: 1 Cpu Read/Write: 1 Reset: 0
+ CPU address: 00100101 CPU data: ZZZZZZZZ
+ Memory data: ZZZZZZZZ
+
+ Busy: 1 Memory  Enable: 0
+ Memory  Address: ZZZZZZZZ
+ ----------------------------------------------
+ Clock: 256 Start: 0 Cpu Read/Write: Z Reset: 0
+ CPU address: ZZZZZZZZ CPU data: 00011100
+ Memory data: ZZZZZZZZ
+
+ Busy: 0 Memory  Enable: 0
+ Memory  Address: ZZZZZZZZ
+ ----------------------------------------------
+ Clock: 258 Start: 1 Cpu Read/Write: 1 Reset: 0
+ CPU address: 01001010 CPU data: ZZZZZZZZ
+ Memory data: ZZZZZZZZ
+
+ Busy: 1 Memory  Enable: 0
+ Memory  Address: ZZZZZZZZ
+ ----------------------------------------------
+ Clock: 259 Start: 0 Cpu Read/Write: Z Reset: 0
+ CPU address: ZZZZZZZZ CPU data: 00101100
+ Memory data: ZZZZZZZZ
+
+ Busy: 0 Memory  Enable: 0
+ Memory  Address: ZZZZZZZZ
+ ----------------------------------------------
+ Clock: 261 Start: 1 Cpu Read/Write: 1 Reset: 0
+ CPU address: 01101111 CPU data: ZZZZZZZZ
+ Memory data: ZZZZZZZZ
+
+ Busy: 1 Memory  Enable: 0
+ Memory  Address: ZZZZZZZZ
+ ----------------------------------------------
+ Clock: 262 Start: 0 Cpu Read/Write: Z Reset: 0
+ CPU address: ZZZZZZZZ CPU data: 00111100
+ Memory data: ZZZZZZZZ
+
+ Busy: 0 Memory  Enable: 0
+ Memory  Address: ZZZZZZZZ
+ ----------------------------------------------
+ Clock: 264 Start: 1 Cpu Read/Write: 1 Reset: 0
+ CPU address: 10010000 CPU data: ZZZZZZZZ
+ Memory data: ZZZZZZZZ
+
+ Busy: 1 Memory  Enable: 0
+ Memory  Address: ZZZZZZZZ
+ ----------------------------------------------
+ Clock: 265 Start: 0 Cpu Read/Write: Z Reset: 0
+ CPU address: ZZZZZZZZ CPU data: 01001111
+ Memory data: ZZZZZZZZ
+
+ Busy: 0 Memory  Enable: 0
+ Memory  Address: ZZZZZZZZ
+ ----------------------------------------------
+ Clock: 267 Start: 1 Cpu Read/Write: 1 Reset: 0
+ CPU address: 10110101 CPU data: ZZZZZZZZ
+ Memory data: ZZZZZZZZ
+
+ Busy: 1 Memory  Enable: 0
+ Memory  Address: ZZZZZZZZ
+ ----------------------------------------------
+ Clock: 268 Start: 0 Cpu Read/Write: Z Reset: 0
+ CPU address: ZZZZZZZZ CPU data: 01011111
+ Memory data: ZZZZZZZZ
+
+ Busy: 0 Memory  Enable: 0
+ Memory  Address: ZZZZZZZZ
+ ----------------------------------------------
+ Clock: 270 Start: 1 Cpu Read/Write: 1 Reset: 0
+ CPU address: 11011010 CPU data: ZZZZZZZZ
+ Memory data: ZZZZZZZZ
+
+ Busy: 1 Memory  Enable: 0
+ Memory  Address: ZZZZZZZZ
+ ----------------------------------------------
+ Clock: 271 Start: 0 Cpu Read/Write: Z Reset: 0
+ CPU address: ZZZZZZZZ CPU data: 01101111
+ Memory data: ZZZZZZZZ
+
+ Busy: 0 Memory  Enable: 0
+ Memory  Address: ZZZZZZZZ
+ ----------------------------------------------
+ Clock: 273 Start: 1 Cpu Read/Write: 1 Reset: 0
+ CPU address: 11111111 CPU data: ZZZZZZZZ
+ Memory data: ZZZZZZZZ
+
+ Busy: 1 Memory  Enable: 0
+ Memory  Address: ZZZZZZZZ
+ ----------------------------------------------
+ Clock: 274 Start: 0 Cpu Read/Write: Z Reset: 0
+ CPU address: ZZZZZZZZ CPU data: 01111111
+ Memory data: ZZZZZZZZ
+
+ Busy: 0 Memory  Enable: 0
+ Memory  Address: ZZZZZZZZ
+ ----------------------------------------------
