@@ -10,13 +10,6 @@ ZZZZZZZZ
 ZZZZZZZZ
 Z
 0
-1
-ZZZZZZZZ
-- Do nothing
-ZZZZZZZZ
-ZZZZZZZZ
-Z
-0
 0
 ZZZZZZZZ
 - Read miss 1'st block

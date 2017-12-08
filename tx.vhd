@@ -20,7 +20,7 @@ architecture structural of tx is
 
 begin
                                   
-    txprocess: process (sel, selnot, input)                 
+    txprocess: process(sel, selnot, input)
     begin                           
         if (sel = '1' and selnot = '0') then
             output <= input;

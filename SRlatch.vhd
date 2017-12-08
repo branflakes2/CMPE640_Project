@@ -8,12 +8,14 @@ entity SRlatch is
 end SRlatch;
 
 architecture structural of SRlatch is
-signal notQ : STD_LOGIC;
-signal q2   :   std_logic;
 begin
-
-q <= q2;
-q2    <= r nor notQ;
-notQ <= s nor q2;
+    p   :   process(s, r)
+    begin
+        if r = '1' then 
+            q <= '0';
+        elsif s = '1' then
+            q <= '1';
+        end if;
+    end process;
 
 end structural;

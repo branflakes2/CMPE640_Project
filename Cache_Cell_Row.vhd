@@ -65,6 +65,15 @@ architecture structural of Cache_Cell_Row is
     );
     end component;
 
+    component mux2_1 is
+    port(
+        in1     :   in  std_logic;
+        in2     :   in  std_logic;
+        sel     :   in  std_logic;
+        out1    :   out std_logic
+    );
+    end component;
+    
     component and2
     port(
         in1     :   in  std_logic;
@@ -73,13 +82,25 @@ architecture structural of Cache_Cell_Row is
     );
     end component;
 
+    component invX1
+    port(
+        in1     :   in  std_logic;
+        out1    :   out std_logic
+    );
+    end component;
+
     signal Tag_Wr   :   std_logic;
     signal Val_Set  :   std_logic;
+    signal s_in     :   std_logic;
+    signal n_reset  :   std_logic;
 
 begin
     
+    nrst    :   invX1   port map(reset, n_reset);
     andtag  :   and2    port map(Tag_Wr_En, Row_En, Tag_Wr);
     valid_s :   and2    port map(Set_Valid, Row_En, Val_Set);
+
+    rst_mux :   mux2_1  port map(Set_Valid, n_reset, reset, s_in);
 
     data0   :   Cache_Cell_Data_Block   port map(Data_In, Row_Wr_En, Col0_Wr_En, reset, Gnd, Data_Out, Row_Rd_En, Col0_Rd_En);
     data1   :   Cache_Cell_Data_Block   port map(Data_In, Row_Wr_En, Col1_Wr_En, reset, Gnd, Data_Out, Row_Rd_En, Col1_Rd_En);
@@ -88,6 +109,6 @@ begin
 
     tag     :   Cache_Cell_Tag          port map(Tag_In, Row_Wr_En, Tag_Wr, reset, Gnd, Tag_Out, Row_Rd_En, Row_En);
     
-    valid   :   Cache_Cell_Valid        port map(Val_Set, reset, Row_En, Row_En, Valid_Out);
+    valid   :   Cache_Cell_Valid        port map(s_in, reset, Row_En, Row_En, Valid_Out);
 
 end structural;
