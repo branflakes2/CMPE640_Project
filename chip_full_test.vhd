@@ -104,7 +104,7 @@ begin
   
   io_process: process
 
-    file infile  : text is in "./chip_full_in.txt";
+    file infile  : text is "./chip_full_in.txt";
     variable buf: line;
     variable value: std_logic_vector(7 downto 0);
     variable value1: std_logic;

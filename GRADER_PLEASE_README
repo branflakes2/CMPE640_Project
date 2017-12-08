@@ -1,0 +1,9 @@
+The only bug in my design is that for some reason it takes 2 clock cycles for
+the valid cells in the cache to reset instead of just 1. Please take this
+into account when running test benches, otherwise the valid cells will start
+out undefined, which causes hit_miss calculation to fail.
+
+I didn't have time to make proper test benches for every module, so I made
+test benches with hard coded timing that can be checked using the waveform
+viewer. Every *test.vhd or *Test.vhd is a testbench and has its results 
+shown in the report.

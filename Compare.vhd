@@ -27,7 +27,7 @@ architecture structural of Compare is
     );
     end component;
 
-    component xor2
+    component xnor2
     port(
         in1     :   in  std_logic;
         in2     :   in  std_logic;
@@ -42,9 +42,9 @@ architecture structural of Compare is
 
 begin
 
-    xor_0   :   xor2    port map(in1(0), in2(0), xor_out(0));
-    xor_1   :   xor2    port map(in1(1), in2(1), xor_out(1));
-    xor_2   :   xor2    port map(in1(2), in2(2), xor_out(2));
+    xor_0   :   xnor2    port map(in1(0), in2(0), xor_out(0));
+    xor_1   :   xnor2    port map(in1(1), in2(1), xor_out(1));
+    xor_2   :   xnor2    port map(in1(2), in2(2), xor_out(2));
     nor_0   :   nor2    port map(xor_out(0), xor_out(1), nor_out);
     i       :   invX1   port map(nor_out, inv);
     nor_1   :   nor2    port map(xor_out(2), inv, out1);

@@ -12,7 +12,7 @@ end Decoder;
 
 architecture structural of Decoder is
 
-    component and3
+    component nor3
     port(
         in1     :   in  std_logic;
         in2     :   in  std_logic;
@@ -21,7 +21,7 @@ architecture structural of Decoder is
     );
     end component;
 
-    component and2
+    component nor2
     port(
         in1     :   in  std_logic;
         in2     :   in  std_logic;
@@ -46,18 +46,18 @@ begin
     inv3    :   invX1   port map(Mem_Add(3), nMem_Add(3));
     inv4    :   invX1   port map(Mem_Add(4), nMem_Add(4));
 
-    bl_off0 :   and3    port map(nMem_Add(4), nMem_Add(3), nMem_Add(2), Row_En(0));
-    bl_off1 :   and3    port map(nMem_Add(4), nMem_Add(3), Mem_Add(2), Row_En(1));
-    bl_off2 :   and3    port map(nMem_Add(4), Mem_Add(3), nMem_Add(2), Row_En(2));
-    bl_off3 :   and3    port map(nMem_Add(4), Mem_Add(3), Mem_Add(2), Row_En(3));
-    bl_off4 :   and3    port map(Mem_Add(4), nMem_Add(3), nMem_Add(2), Row_En(4));
-    bl_off5 :   and3    port map(Mem_Add(4), nMem_Add(3), Mem_Add(2), Row_En(5));
-    bl_off6 :   and3    port map(Mem_Add(4), Mem_Add(3), nMem_Add(2), Row_En(6));
-    bl_off7 :   and3    port map(Mem_Add(4), Mem_Add(3), Mem_Add(2), Row_En(7));
+    r_off0  :   nor3    port map(Mem_Add(4), Mem_Add(3), Mem_Add(2), Row_En(0));
+    r_off1  :   nor3    port map(Mem_Add(4), Mem_Add(3), nMem_Add(2), Row_En(1));
+    r_off2  :   nor3    port map(Mem_Add(4), nMem_Add(3), Mem_Add(2), Row_En(2));
+    r_off3  :   nor3    port map(Mem_Add(4), nMem_Add(3), nMem_Add(2), Row_En(3));
+    r_off4  :   nor3    port map(nMem_Add(4), Mem_Add(3), Mem_Add(2), Row_En(4));
+    r_off5  :   nor3    port map(nMem_Add(4), Mem_Add(3), nMem_Add(2), Row_En(5));
+    r_off6  :   nor3    port map(nMem_Add(4), nMem_Add(3), Mem_Add(2), Row_En(6));
+    r_off7  :   nor3    port map(nMem_Add(4), nMem_Add(3), nMem_Add(2), Row_En(7));
 
-    by_off0 :   and2    port map(nMem_Add(1), nMem_Add(0), Col_En(0));
-    by_off1 :   and2    port map(nMem_Add(1), Mem_Add(0), Col_En(1));
-    by_off2 :   and2    port map(Mem_Add(1), nMem_Add(0), Col_En(2));
-    by_off3 :   and2    port map(Mem_Add(1), Mem_Add(0), Col_En(3));
+    by_off0 :   nor2    port map(Mem_Add(1), Mem_Add(0), Col_En(0));
+    by_off1 :   nor2    port map(Mem_Add(1), nMem_Add(0), Col_En(1));
+    by_off2 :   nor2    port map(nMem_Add(1), Mem_Add(0), Col_En(2));
+    by_off3 :   nor2    port map(nMem_Add(1), nMem_Add(0), Col_En(3));
 
 end structural;
