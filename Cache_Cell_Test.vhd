@@ -36,6 +36,9 @@ architecture test of Cache_Cell_Test is
     signal s_Rd_En  :   std_logic;
     signal s_nRd_En :   std_logic;
 
+    for inv :   invX1 use entity work.invX1(structural);
+    for cache   :   Cache_Cell use entity work.Cache_Cell(structural);
+
 begin
 
     inv     :   invX1       port map(s_Rd_En, s_nRd_En);

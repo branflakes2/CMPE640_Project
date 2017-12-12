@@ -20,6 +20,8 @@ architecture test of Hit_Miss_Test is
     signal tag1, tag2   :   std_logic_vector(2 downto 0);
     signal Valid, HitMiss   :   std_logic;
 
+    for pm  :   Hit_Miss use entity work.Hit_Miss(structural);
+
 begin
     
     pm  :   Hit_Miss port map(tag1, tag2, Valid, HitMiss);

@@ -24,6 +24,8 @@ architecture test of Dlatch_Test is
     signal s_q      :   std_logic;
     signal s_qbar   :   std_logic;
 
+    for a   :   Dlatch use entity work.Dlatch(structural);
+
 begin
 
     a   :   Dlatch  port map(s_d, s_clk, s_q, s_qbar);

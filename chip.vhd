@@ -56,7 +56,6 @@ architecture structural of chip is
         Tag_Wr_En   :   in  std_logic;
         Gnd         :   in  std_logic;
         reset       :   in  std_logic;
-        enable      :   in  std_logic;
         Data_Out    :   out std_logic_vector(7 downto 0);
         Tag_Out     :   out std_logic_vector(2 downto 0);
         Valid_Out   :   out std_logic
@@ -186,6 +185,20 @@ architecture structural of chip is
     signal wr_on_rd_miss    :   std_logic_vector(3 downto 0);
     signal cache_write      :   std_logic;
     signal rm_wr_en         :   std_logic;
+
+    for nreadwr, nrm, nb, not_start    :   invX1   use entity work.invX1(structural);
+    for data_reg, addr_reg  :   register8 use entity work.register8(structural);
+    for decode              :   Decoder use entity work.Decoder(structural);
+    for cache               :   Cache_Block use entity work.Cache_Block(structural);
+    for hm                  :   Hit_Miss use entity work.Hit_Miss(structural);
+    for state               :   Counter use entity work.Counter(structural);
+    for outen0, outen1, outen2      :   Output_Enable use entity work.Output_Enable(structural);
+    for rnors               :   nor2 use entity work.nor2(structural);
+    for reg_en, colen0, colen1, colen2, colen3 : or2 use entity work.or2(structural);
+    for rm0, rm1, rm2, rm3, colen_wr0, colen_wr1, colen_wr2, colen_wr3  :   and2 use entity work.and2(structural);
+    for oen                 :   nand2 use entity work.nand2(structural);
+    
+
 begin
 
     busy        <=  internal_busy;
@@ -194,7 +207,7 @@ begin
     data_reg    :   register8   port map(cpu_data, reg_clk_en, reset, Gnd, data_reg_out);
     addr_reg    :   register8   port map(cpu_add, reg_clk_en, reset, Gnd, addr_reg_out);   
     decode      :   Decoder     port map(addr_reg_out(4 downto 0), col_dec_out, row_dec_out);
-    cache       :   Cache_Block port map(data_bus, addr_reg_out(7 downto 5), w0, rdwr, cache_write, col_en, row_dec_out, w0, Gnd, reset, internal_busy, cache_data_out, cache_tag_out, cache_valid_out);
+    cache       :   Cache_Block port map(data_bus, addr_reg_out(7 downto 5), w0, rdwr, cache_write, col_en, row_dec_out, w0, Gnd, reset, cache_data_out, cache_tag_out, cache_valid_out);
     hm          :   Hit_Miss    port map(addr_reg_out(7 downto 5), cache_tag_out, cache_valid_out, hitmiss);
     state       :   Counter     port map(clk, hitmiss, cpu_rd_wrn, start, Vdd, Gnd, reset, internal_busy, rdwr, cache_write, rm_wr_en, wr_hit, dout_en, aout_en, w0, w1, w2, w3);
     outen0      : Output_Enable port map(cache_data_out, dout_en, cpu_data);

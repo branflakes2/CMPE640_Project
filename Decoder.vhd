@@ -38,6 +38,10 @@ architecture structural of Decoder is
 
     signal nMem_Add :   std_logic_vector(4 downto 0);
     
+    for inv0, inv1, inv2, inv3, inv4    :   invX1   use entity work.invX1(structural);
+    for r_off0, r_off1, r_off2, r_off3, r_off4, r_off5, r_off6, r_off7  :   nor3    use entity work.nor3(structural);
+    for by_off0, by_off1, by_off2, by_off3  :   nor2    use entity work.nor2(structural);
+
 begin
 
     inv0    :   invX1   port map(Mem_Add(0), nMem_Add(0));

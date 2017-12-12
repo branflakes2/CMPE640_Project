@@ -54,25 +54,13 @@ architecture structural of Counter is
     );
     end component;
 
-    component dff_reset_high
-    port(
-        d       :   in  std_logic;
-        clk     :   in  std_logic;
-        reset   :   in  std_logic;
-        Gnd     :   in  std_logic;
-        q       :   out std_logic;
-        qbar    :   out std_logic
-    );
-    end component;
-
     component dff_reset
     port(
         d       :   in  std_logic;
         clk     :   in  std_logic;
         reset   :   in  std_logic;
         Gnd     :   in  std_logic;
-        q       :   out std_logic;
-        qbar    :   out std_logic
+        q       :   out std_logic
     );
     end component;
 
@@ -182,6 +170,7 @@ architecture structural of Counter is
 
     --write signals
     signal n_1          :   std_logic;
+    signal n_2          :   std_logic;
     signal n_10         :   std_logic;
     signal n_12         :   std_logic;
     signal n_14         :   std_logic;
@@ -202,12 +191,24 @@ architecture structural of Counter is
     signal s_mem_enable :   std_logic;
 
     signal r_rd_wr      :   std_logic;
+    signal nrd_wr       :   std_logic;
     signal read_miss_wr :   std_logic;
 
     signal cache_wr0    :   std_logic;
     signal cache_wr1    :   std_logic;
     signal cache_wr2    :   std_logic;
     signal cache_wr_hit :   std_logic;
+
+    for rm_write0, rm_write1, SR, wrh_or_wrm, rst_busy, rst_sr, rd_op   : or2 use entity work.or2(structural);
+    for wh_write, mem_en  :   and3 use entity work.and3(structural);
+    for cache_wr, busy_rst, en  :   or3 use entity work.or3(structural);
+    for wr_rm, reset_and1, reset_and2, reset_and3, enable, srin, w0out, w1out, w2out, w3out, dout_set_en, hml   :   and2 use entity work.and2(structural);
+    for nc1, n2, nrw, not_busy, nbusy_rst, n10, n12, n14, n16, n17    :   invX1 use entity work.invX1(structural);
+    for busy_reg    :   srff use entity work.srff(structural);
+    for counter     :   SR18 use entity work.SR18(structural);
+    for dout_en, mem_en_reg :   dff_reset use entity work.dff_reset(structural);
+    for rwrhm_reg   :   rd_wr_hit_miss_reg use entity work.rd_wr_hit_miss_reg(structural);
+      
 
 begin
 
@@ -216,13 +217,16 @@ begin
     --cache write logic
     rm_write0   :   or2     port map(w0, w1, cache_wr0);
     rm_write1   :   or2     port map(w2, w3, cache_wr1);
-    wh_write    :   and3    port map(r_wr_hit, count(0), n_1, cache_wr_hit);
+    wh_write    :   and3    port map(r_wr_hit, count(1), n_2, cache_wr_hit);
+    wr_hit <= cache_wr_hit;
+    nrw         :   invX1   port map(r_rd_wr, nrd_wr);
     cache_wr    :   or3     port map(cache_wr0, cache_wr1, cache_wr_hit, cache_write);
     wr_rm       :   and2    port map(count(7), n_17, rm_wr_en);    
 
     SR          :   or2     port map(busy_internal, start, busy_in);
 
-    rwrhm_reg   :   rd_wr_hit_miss_reg  port map(rd_wr, start, hit_miss, hm_latch, clk, reset, Gnd, rd_wr_o, r_rd_hit, r_wr_hit, r_rd_miss, r_wr_miss);
+    rwrhm_reg   :   rd_wr_hit_miss_reg  port map(rd_wr, start, hit_miss, hm_latch, clk, reset, Gnd, r_rd_wr, r_rd_hit, r_wr_hit, r_rd_miss, r_wr_miss);
+    rd_wr_o <= r_rd_wr;
     not_busy    :   invX1   port map(busy_internal, n_busy);
 
     --logic for resetting busy
@@ -250,6 +254,7 @@ begin
     srin        :   and2    port map(nbusy_reg_reset, busy_in, sr_input);
 
     --write signals
+    n2          :   invX1   port map(count(2), n_2);
     n10         :   invX1   port map(count(10), n_10);
     n12         :   invX1   port map(count(12), n_12);
     n14         :   invX1   port map(count(14), n_14);
@@ -268,14 +273,12 @@ begin
 
     rd_op       :   or2     port map(r_rd_miss, r_rd_hit, rd_operation);
     dout_set_en :   and2    port map(busy_reset, rd_operation, cdout_en);
-    dout_en     :   dff_reset   port map(cdout_en, clk, reset, Gnd, cpu_dout_en, open);
+    dout_en     :   dff_reset   port map(cdout_en, clk, reset, Gnd, cpu_dout_en);
 
-    nc1         :   invX1   port map(count(1), n_1);
     mem_en      :   and3    port map(count(0), r_rd_miss, n_1, s_mem_enable);
-    mem_en_reg  :   dff_reset   port map(s_mem_enable, clk, reset, Gnd, mem_enable, open);
-
-    write_wh    :   and3    port map(r_wr_hit, count(0), n_1, wr_hit);
+    mem_en_reg  :   dff_reset   port map(s_mem_enable, clk, reset, Gnd, mem_enable);
 
     --hit_miss_latch signals
     hml         :   and2    port map(count(0), n_1, hm_latch);
+    nc1         :   invX1   port map(count(1), n_1);
 end structural;

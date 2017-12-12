@@ -21,7 +21,7 @@ architecture structural of Hit_Miss is
     );
     end component;
 
-    component nor2
+    component nand2
     port(
         in1     :   in  std_logic;
         in2     :   in  std_logic;
@@ -38,10 +38,16 @@ architecture structural of Hit_Miss is
 
     signal comp_out :   std_logic;
     signal n_valid  :   std_logic;
+
+    for comp    :   Compare use entity work.Compare(structural);
+    for v       :   nand2   use entity work.nand2(structural);
+    for nv      :   invX1   use entity work.invX1(structural);
+
 begin
 
     comp    :   Compare port map(tag1, tag2, comp_out);
-    v       :   nor2    port map(comp_out, n_valid, HitMiss);
-    nv      :   invx1   port map(valid, n_valid);
+    v       :   nand2    port map(comp_out, valid, n_valid);
+    nv      :   invX1   port map(n_valid, HitMiss);
+    
 
 end structural;

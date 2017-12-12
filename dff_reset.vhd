@@ -8,8 +8,7 @@ entity dff_reset is
         clk     :   in  std_logic;
         reset   :   in  std_logic;
         Gnd     :   in  std_logic;
-        q       :   out std_logic;
-        qbar    :   out std_logic
+        q       :   out std_logic
     ); 
 end dff_reset;                          
 
@@ -19,8 +18,7 @@ architecture structural of dff_reset is
     port(
         d       :   in  std_logic;
         clk     :   in  std_logic;
-        q       :   out std_logic;  
-        qbar    :   out std_logic
+        q       :   out std_logic
     );
     end component;
 
@@ -35,9 +33,12 @@ architecture structural of dff_reset is
 
     signal mux_out  :   std_logic;
   
+    for mux :   mux2_1 use entity work.mux2_1(structural);
+    for dl  :   dff use entity work.dff(structural);
+
 begin
   
     mux     :   mux2_1  port map(d,         Gnd,    reset,  mux_out);
-    dl      :   dff     port map(mux_out,   clk,    q,      qbar);
+    dl      :   dff     port map(mux_out,   clk,    q);
  
 end structural;

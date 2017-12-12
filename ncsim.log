@@ -5,7 +5,7 @@ Relinquished control to SimVision...
 ncsim> 
 ncsim> database -open waves -into waves.shm -default
 Created default SHM database waves
-ncsim> probe -create -shm :busy :clk :clk_count :clock :cpu_add :cpu_data :cpu_rd_wrn :done :Gnd :mem_add :mem_data :mem_en :reset :start
+ncsim> probe -create -shm :busy :clk :clk_count :clock :cpu_add :cpu_data :cpu_rd_wrn :done :Gnd :mem_add :mem_data :mem_en :reset :start :Vdd
 Created probe 1
 ncsim> run
  Clock: 1 Start: 0 Cpu Read/Write: Z Reset: 1
@@ -51,7 +51,21 @@ ncsim> run
  Memory  Address: ZZZZZZZZ
  ----------------------------------------------
  Clock: 24 Start: 0 Cpu Read/Write: Z Reset: 0
- CPU address: ZZZZZZZZ CPU data: 00000000
+ CPU address: ZZZZZZZZ CPU data: ZZZZZZZZ
+ Memory data: ZZZZZZZZ
+
+ Busy: 1 Memory  Enable: 1
+ Memory  Address: 00100101
+ ----------------------------------------------
+ Clock: 25 Start: 0 Cpu Read/Write: Z Reset: 0
+ CPU address: ZZZZZZZZ CPU data: ZZZZZZZZ
+ Memory data: ZZZZZZZZ
+
+ Busy: 1 Memory  Enable: 0
+ Memory  Address: ZZZZZZZZ
+ ----------------------------------------------
+ Clock: 41 Start: 0 Cpu Read/Write: Z Reset: 0
+ CPU address: ZZZZZZZZ CPU data: 00010001
  Memory data: ZZZZZZZZ
 
  Busy: 0 Memory  Enable: 0
@@ -65,7 +79,21 @@ ncsim> run
  Memory  Address: ZZZZZZZZ
  ----------------------------------------------
  Clock: 44 Start: 0 Cpu Read/Write: Z Reset: 0
- CPU address: ZZZZZZZZ CPU data: 00000000
+ CPU address: ZZZZZZZZ CPU data: ZZZZZZZZ
+ Memory data: ZZZZZZZZ
+
+ Busy: 1 Memory  Enable: 1
+ Memory  Address: 01001010
+ ----------------------------------------------
+ Clock: 45 Start: 0 Cpu Read/Write: Z Reset: 0
+ CPU address: ZZZZZZZZ CPU data: ZZZZZZZZ
+ Memory data: ZZZZZZZZ
+
+ Busy: 1 Memory  Enable: 0
+ Memory  Address: ZZZZZZZZ
+ ----------------------------------------------
+ Clock: 61 Start: 0 Cpu Read/Write: Z Reset: 0
+ CPU address: ZZZZZZZZ CPU data: 00100010
  Memory data: ZZZZZZZZ
 
  Busy: 0 Memory  Enable: 0
@@ -79,7 +107,21 @@ ncsim> run
  Memory  Address: ZZZZZZZZ
  ----------------------------------------------
  Clock: 64 Start: 0 Cpu Read/Write: Z Reset: 0
- CPU address: ZZZZZZZZ CPU data: 00000000
+ CPU address: ZZZZZZZZ CPU data: ZZZZZZZZ
+ Memory data: ZZZZZZZZ
+
+ Busy: 1 Memory  Enable: 1
+ Memory  Address: 01101111
+ ----------------------------------------------
+ Clock: 65 Start: 0 Cpu Read/Write: Z Reset: 0
+ CPU address: ZZZZZZZZ CPU data: ZZZZZZZZ
+ Memory data: ZZZZZZZZ
+
+ Busy: 1 Memory  Enable: 0
+ Memory  Address: ZZZZZZZZ
+ ----------------------------------------------
+ Clock: 81 Start: 0 Cpu Read/Write: Z Reset: 0
+ CPU address: ZZZZZZZZ CPU data: 00110011
  Memory data: ZZZZZZZZ
 
  Busy: 0 Memory  Enable: 0
@@ -93,7 +135,21 @@ ncsim> run
  Memory  Address: ZZZZZZZZ
  ----------------------------------------------
  Clock: 84 Start: 0 Cpu Read/Write: Z Reset: 0
- CPU address: ZZZZZZZZ CPU data: 00000000
+ CPU address: ZZZZZZZZ CPU data: ZZZZZZZZ
+ Memory data: ZZZZZZZZ
+
+ Busy: 1 Memory  Enable: 1
+ Memory  Address: 10010000
+ ----------------------------------------------
+ Clock: 85 Start: 0 Cpu Read/Write: Z Reset: 0
+ CPU address: ZZZZZZZZ CPU data: ZZZZZZZZ
+ Memory data: ZZZZZZZZ
+
+ Busy: 1 Memory  Enable: 0
+ Memory  Address: ZZZZZZZZ
+ ----------------------------------------------
+ Clock: 101 Start: 0 Cpu Read/Write: Z Reset: 0
+ CPU address: ZZZZZZZZ CPU data: 01000000
  Memory data: ZZZZZZZZ
 
  Busy: 0 Memory  Enable: 0
@@ -107,7 +163,21 @@ ncsim> run
  Memory  Address: ZZZZZZZZ
  ----------------------------------------------
  Clock: 104 Start: 0 Cpu Read/Write: Z Reset: 0
- CPU address: ZZZZZZZZ CPU data: 00000000
+ CPU address: ZZZZZZZZ CPU data: ZZZZZZZZ
+ Memory data: ZZZZZZZZ
+
+ Busy: 1 Memory  Enable: 1
+ Memory  Address: 10110101
+ ----------------------------------------------
+ Clock: 105 Start: 0 Cpu Read/Write: Z Reset: 0
+ CPU address: ZZZZZZZZ CPU data: ZZZZZZZZ
+ Memory data: ZZZZZZZZ
+
+ Busy: 1 Memory  Enable: 0
+ Memory  Address: ZZZZZZZZ
+ ----------------------------------------------
+ Clock: 121 Start: 0 Cpu Read/Write: Z Reset: 0
+ CPU address: ZZZZZZZZ CPU data: 01010001
  Memory data: ZZZZZZZZ
 
  Busy: 0 Memory  Enable: 0
@@ -121,7 +191,21 @@ ncsim> run
  Memory  Address: ZZZZZZZZ
  ----------------------------------------------
  Clock: 124 Start: 0 Cpu Read/Write: Z Reset: 0
- CPU address: ZZZZZZZZ CPU data: 00000000
+ CPU address: ZZZZZZZZ CPU data: ZZZZZZZZ
+ Memory data: ZZZZZZZZ
+
+ Busy: 1 Memory  Enable: 1
+ Memory  Address: 11011010
+ ----------------------------------------------
+ Clock: 125 Start: 0 Cpu Read/Write: Z Reset: 0
+ CPU address: ZZZZZZZZ CPU data: ZZZZZZZZ
+ Memory data: ZZZZZZZZ
+
+ Busy: 1 Memory  Enable: 0
+ Memory  Address: ZZZZZZZZ
+ ----------------------------------------------
+ Clock: 141 Start: 0 Cpu Read/Write: Z Reset: 0
+ CPU address: ZZZZZZZZ CPU data: 01100010
  Memory data: ZZZZZZZZ
 
  Busy: 0 Memory  Enable: 0
@@ -499,7 +583,7 @@ ncsim> run
  Memory  Address: ZZZZZZZZ
  ----------------------------------------------
  Clock: 252 Start: 0 Cpu Read/Write: Z Reset: 0
- CPU address: ZZZZZZZZ CPU data: 00000000
+ CPU address: ZZZZZZZZ CPU data: 00001100
  Memory data: ZZZZZZZZ
 
  Busy: 0 Memory  Enable: 0
@@ -513,7 +597,7 @@ ncsim> run
  Memory  Address: ZZZZZZZZ
  ----------------------------------------------
  Clock: 255 Start: 0 Cpu Read/Write: Z Reset: 0
- CPU address: ZZZZZZZZ CPU data: 00000000
+ CPU address: ZZZZZZZZ CPU data: 00011100
  Memory data: ZZZZZZZZ
 
  Busy: 0 Memory  Enable: 0
@@ -527,7 +611,7 @@ ncsim> run
  Memory  Address: ZZZZZZZZ
  ----------------------------------------------
  Clock: 258 Start: 0 Cpu Read/Write: Z Reset: 0
- CPU address: ZZZZZZZZ CPU data: 00000000
+ CPU address: ZZZZZZZZ CPU data: 00101100
  Memory data: ZZZZZZZZ
 
  Busy: 0 Memory  Enable: 0
@@ -541,7 +625,7 @@ ncsim> run
  Memory  Address: ZZZZZZZZ
  ----------------------------------------------
  Clock: 261 Start: 0 Cpu Read/Write: Z Reset: 0
- CPU address: ZZZZZZZZ CPU data: 00000000
+ CPU address: ZZZZZZZZ CPU data: 00111100
  Memory data: ZZZZZZZZ
 
  Busy: 0 Memory  Enable: 0
@@ -555,7 +639,7 @@ ncsim> run
  Memory  Address: ZZZZZZZZ
  ----------------------------------------------
  Clock: 264 Start: 0 Cpu Read/Write: Z Reset: 0
- CPU address: ZZZZZZZZ CPU data: 00000000
+ CPU address: ZZZZZZZZ CPU data: 01001111
  Memory data: ZZZZZZZZ
 
  Busy: 0 Memory  Enable: 0
@@ -569,7 +653,7 @@ ncsim> run
  Memory  Address: ZZZZZZZZ
  ----------------------------------------------
  Clock: 267 Start: 0 Cpu Read/Write: Z Reset: 0
- CPU address: ZZZZZZZZ CPU data: 00000000
+ CPU address: ZZZZZZZZ CPU data: 01011111
  Memory data: ZZZZZZZZ
 
  Busy: 0 Memory  Enable: 0
@@ -583,7 +667,7 @@ ncsim> run
  Memory  Address: ZZZZZZZZ
  ----------------------------------------------
  Clock: 270 Start: 0 Cpu Read/Write: Z Reset: 0
- CPU address: ZZZZZZZZ CPU data: 00000000
+ CPU address: ZZZZZZZZ CPU data: 01101111
  Memory data: ZZZZZZZZ
 
  Busy: 0 Memory  Enable: 0
@@ -597,7 +681,7 @@ ncsim> run
  Memory  Address: ZZZZZZZZ
  ----------------------------------------------
  Clock: 273 Start: 0 Cpu Read/Write: Z Reset: 0
- CPU address: ZZZZZZZZ CPU data: 00000000
+ CPU address: ZZZZZZZZ CPU data: 01111111
  Memory data: ZZZZZZZZ
 
  Busy: 0 Memory  Enable: 0

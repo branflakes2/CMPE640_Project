@@ -31,7 +31,7 @@ architecture structural of Cache_Cell_Valid is
     );
     end component;
 
-    component or2
+    component nor2
     port(
         in1     :   in  std_logic;
         in2     :   in  std_logic;
@@ -50,10 +50,15 @@ architecture structural of Cache_Cell_Valid is
     signal  nRd_En  :   std_logic;
     signal  out_en  :   std_logic;
 
+    for or1 :   nor2 use entity work.nor2(structural);
+    for inv :   invX1 use entity work.invX1(structural);
+    for sr  :   SRlatch use entity work.SRlatch(structural);
+    for t   :   tx  use entity work.tx(structural);
+
 begin
     
-    or1 :   or2     port map(Rd_En, Wr_En, out_en);
-    inv :   invX1   port map(out_en, nRd_En);
+    or1 :   nor2     port map(Rd_En, Wr_En, nRd_En);
+    inv :   invX1   port map(nRd_En, out_en);
     sr  :   SRlatch port map(s, r, q1);
     t   :   tx      port map(out_en, nRd_En, q1, q);
 

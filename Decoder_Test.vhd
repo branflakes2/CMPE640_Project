@@ -20,6 +20,8 @@ architecture test of Decoder_Test is
     signal Col_En   :   std_logic_vector(3 downto 0);
     signal Row_En   :   std_logic_vector(7 downto 0);
 
+    for pm  :   Decoder use entity work.Decoder(structural);
+
 begin
     
     pm  :   Decoder port map(Mem_Add, Col_En, Row_En);

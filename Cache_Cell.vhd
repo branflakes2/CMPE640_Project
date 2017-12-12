@@ -22,8 +22,7 @@ architecture structural of Cache_Cell is
         clk     :   in  std_logic;
         reset   :   in  std_logic;
         Gnd     :   in  std_logic;
-        q       :   out std_logic;  
-        qbar    :   out std_logic
+        q       :   out std_logic
     );
     end component;
 
@@ -56,14 +55,14 @@ architecture structural of Cache_Cell is
     signal bout :   std_logic; --buffer output 
     signal eout :   std_logic; --enable signal going into Dlatch
 
+    for r_or    :   or2 use entity work.or2(structural);
+    for dl      :   Dlatch_Reset use entity work.Dlatch_Reset(structural);
+    for trans   :   tx  use entity work.tx(structural);
+
 begin
 
-    --buffer for timing reset signal  
-    buf1    :   invX1           port map(reset, b1);
-    buf2    :   invX1           port map(b1, bout);
-
     r_or    :   or2             port map(reset, W_En, eout);
-    dl      :   Dlatch_Reset    port map(Data, eout, bout, Gnd, Dout, open);
+    dl      :   Dlatch_Reset    port map(Data, eout, reset, Gnd, Dout);
     trans   :   tx              port map(Rd_En, nRd_En, Dout, Output);
 
 end structural;

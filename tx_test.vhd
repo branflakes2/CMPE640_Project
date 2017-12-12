@@ -19,6 +19,8 @@ architecture test of tx_test is
 
     signal input, sel, selnot, output   :   std_logic;
 
+    for asdf    :   tx use entity work.tx(structural);
+
 begin
 
     asdf    :   tx  port map(sel, selnot, input, output);

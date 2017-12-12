@@ -35,6 +35,9 @@ architecture structural of or5 is
 
     signal o1   :   std_logic;
 
+    for og1 : or4 use entity work.or4(structural);
+    for og2 : or2 use entity work.or2(structural);
+
 begin
     
     og1 :   or4 port map(in1, in2, in3, in4, o1);

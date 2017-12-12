@@ -39,15 +39,13 @@ architecture structural of Cache_Cell_Row is
     );  
     end component;
     
-    component Cache_Cell_Tag is
+    component Cache_Cell_Tag
     port(
         Data    :   in  std_logic_vector(2 downto 0);
-        W_En_r  :   in  std_logic;
         Tag_Wr  :   in  std_logic;
         reset   :   in  std_logic;
         Gnd     :   in  std_logic;
         Output  :   out std_logic_vector(2 downto 0);
-        Rd_En   :   in  std_logic;
         Row_En  :   in  std_logic
     );
     end component;
@@ -65,7 +63,7 @@ architecture structural of Cache_Cell_Row is
     );
     end component;
 
-    component mux2_1 is
+    component mux2_1
     port(
         in1     :   in  std_logic;
         in2     :   in  std_logic;
@@ -94,20 +92,27 @@ architecture structural of Cache_Cell_Row is
     signal s_in     :   std_logic;
     signal n_reset  :   std_logic;
 
+    for nrst    :   invX1 use entity work.invX1(structural);
+    for andtag, valid_s :   and2 use entity work.and2(structural);
+    for rst_mux :   mux2_1 use entity work.mux2_1(structural);
+    for data0, data1, data2, data3  :   Cache_Cell_Data_Block use entity work.Cache_Cell_Data_Block(structural);
+    for tag     :   Cache_Cell_Tag use entity work.Cache_Cell_Tag(structural);
+    for valid   :   Cache_Cell_Valid use entity work.Cache_Cell_Valid(structural);
+
 begin
     
     nrst    :   invX1   port map(reset, n_reset);
     andtag  :   and2    port map(Tag_Wr_En, Row_En, Tag_Wr);
     valid_s :   and2    port map(Set_Valid, Row_En, Val_Set);
 
-    rst_mux :   mux2_1  port map(Set_Valid, n_reset, reset, s_in);
+    rst_mux :   mux2_1  port map(Val_Set, n_reset, reset, s_in);
 
     data0   :   Cache_Cell_Data_Block   port map(Data_In, Row_Wr_En, Col0_Wr_En, reset, Gnd, Data_Out, Row_Rd_En, Col0_Rd_En);
     data1   :   Cache_Cell_Data_Block   port map(Data_In, Row_Wr_En, Col1_Wr_En, reset, Gnd, Data_Out, Row_Rd_En, Col1_Rd_En);
     data2   :   Cache_Cell_Data_Block   port map(Data_In, Row_Wr_En, Col2_Wr_En, reset, Gnd, Data_Out, Row_Rd_En, Col2_Rd_En);
     data3   :   Cache_Cell_Data_Block   port map(Data_In, Row_Wr_En, Col3_Wr_En, reset, Gnd, Data_Out, Row_Rd_En, Col3_Rd_En);
 
-    tag     :   Cache_Cell_Tag          port map(Tag_In, Row_Wr_En, Tag_Wr, reset, Gnd, Tag_Out, Row_Rd_En, Row_En);
+    tag     :   Cache_Cell_Tag          port map(Tag_In, Tag_Wr, reset, Gnd, Tag_Out, Row_En);
     
     valid   :   Cache_Cell_Valid        port map(s_in, reset, Row_En, Row_En, Valid_Out);
 

@@ -1,0 +1,128 @@
+@(#)$CDS: LVS version 6.1.7-64b 09/27/2016 19:41 (sjfhw305) $
+
+Command line: /afs/umbc.edu/software/cadence/installs/IC617/tools.lnx86/dfII/bin/64bit/LVS -dir /afs/umbc.edu/users/b/r/brianw5/home/CMPE640/LVS -l -s -t /afs/umbc.edu/users/b/r/brianw5/home/CMPE640/LVS/layout /afs/umbc.edu/users/b/r/brianw5/home/CMPE640/LVS/schematic
+Like matching is enabled.
+Net swapping is enabled.
+Using terminal names as correspondence points.
+Compiling Diva LVS rules...
+
+    Net-list summary for /afs/umbc.edu/users/b/r/brianw5/home/CMPE640/LVS/layout/netlist
+       count
+        4683            nets
+        43              terminals
+        4928            pmos
+        4928            nmos
+
+    Net-list summary for /afs/umbc.edu/users/b/r/brianw5/home/CMPE640/LVS/schematic/netlist
+       count
+        4683            nets
+        43              terminals
+        4928            pmos
+        4928            nmos
+
+
+    Terminal correspondence points
+    N4651     N40       cache_write
+    N4666     N44       col_en<0>
+    N4661     N43       col_en<1>
+    N4656     N42       col_en<2>
+    N4648     N41       col_en<3>
+    N4643     N2        data_in<0>
+    N4681     N3        data_in<1>
+    N4676     N4        data_in<2>
+    N4673     N5        data_in<3>
+    N4670     N6        data_in<4>
+    N4664     N7        data_in<5>
+    N4657     N8        data_in<6>
+    N4652     N9        data_in<7>
+    N4659     N53       data_out<0>
+    N4654     N52       data_out<1>
+    N4646     N51       data_out<2>
+    N4641     N50       data_out<3>
+    N4678     N29       data_out<4>
+    N4675     N28       data_out<5>
+    N4672     N27       data_out<6>
+    N4668     N26       data_out<7>
+    N4662     N24       gnd
+    N4644     N1        gnd!
+    N4650     N39       rd_wr
+    N4679     N25       reset
+    N4658     N49       row_en<0>
+    N4653     N48       row_en<1>
+    N4645     N47       row_en<2>
+    N4640     N46       row_en<3>
+    N4677     N45       row_en<4>
+    N4674     N33       row_en<5>
+    N4671     N32       row_en<6>
+    N4667     N31       row_en<7>
+    N4649     N38       set_valid
+    N4647     N37       tag_in<0>
+    N4642     N36       tag_in<1>
+    N4680     N35       tag_in<2>
+    N4665     N56       tag_out<0>
+    N4660     N55       tag_out<1>
+    N4655     N54       tag_out<2>
+    N4682     N34       tag_wr_en
+    N4669     N57       valid_out
+    N4663     N0        vdd!
+
+Devices in the rules but not in the netlist:
+        cap nfet pfet nmos4 pmos4
+
+The net-lists match.
+
+                             layout  schematic
+                                instances
+        un-matched              0       0      
+        rewired                 0       0      
+        size errors             0       0      
+        pruned                  0       0      
+        active                  9856    9856   
+        total                   9856    9856   
+
+                                  nets
+        un-matched              0       0      
+        merged                  0       0      
+        pruned                  0       0      
+        active                  4683    4683   
+        total                   4683    4683   
+
+                                terminals
+        un-matched              0       0      
+        matched but
+        different type          0       0      
+        total                   43      43     
+
+
+Probe files from /afs/umbc.edu/users/b/r/brianw5/home/CMPE640/LVS/schematic
+
+devbad.out:
+
+netbad.out:
+
+mergenet.out:
+
+termbad.out:
+
+prunenet.out:
+
+prunedev.out:
+
+audit.out:
+
+
+Probe files from /afs/umbc.edu/users/b/r/brianw5/home/CMPE640/LVS/layout
+
+devbad.out:
+
+netbad.out:
+
+mergenet.out:
+
+termbad.out:
+
+prunenet.out:
+
+prunedev.out:
+
+audit.out:

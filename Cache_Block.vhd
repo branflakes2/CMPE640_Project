@@ -14,7 +14,6 @@ entity Cache_Block is
         Tag_Wr_En   :   in  std_logic;
         Gnd         :   in  std_logic;
         reset       :   in  std_logic;
-        enable      :   in  std_logic;
         Data_Out    :   out std_logic_vector(7 downto 0);
         Tag_Out     :   out std_logic_vector(2 downto 0);
         Valid_Out   :   out std_logic
@@ -85,6 +84,9 @@ architecture structural of Cache_Block is
     signal Row_Write    :   std_logic_vector(7 downto 0);
     signal Row_Read     :   std_logic_vector(7 downto 0);
     signal wr_en        :   std_logic;
+
+    for and_0, and_1, and_2, and_3, and_4, and_5, and_6, and_7, r0r, r1r, r2r, r3r, r4r, r5r, r6r, r7r, r0w, r1w, r2w, r3w, r4w, r5w, r6w, r7w : and2 use entity work.and2(structural);
+    for row0, row1, row2, row3, row4, row5, row6, row7 : Cache_Cell_Row use entity work.Cache_Cell_Row(structural);
 
 begin
 

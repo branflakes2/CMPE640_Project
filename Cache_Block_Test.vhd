@@ -32,6 +32,8 @@ architecture test of Cache_Block_Test is
     signal Col_En                       :   std_logic_vector(3 downto 0);
     signal Set_Valid, Rd_Wr, Cache_Write, Tag_Wr_En, reset, enable, Valid_Out   :   std_logic;
 
+    for asdf    :   Cache_Block use entity work.Cache_Block(structural);
+
 begin
 
     asdf    :   Cache_Block port map(Data_In, Tag_In, Set_Valid, Rd_Wr, Cache_Write, Col_En, Row_En, Tag_Wr_En, '0', reset, enable, Data_Out, Tag_Out, Valid_Out);

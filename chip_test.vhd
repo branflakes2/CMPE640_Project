@@ -33,7 +33,7 @@ architecture test of chip_test is
 
 
   
---  for c1 : chip use entity work.chip(structural);
+  for c1 : chip use entity work.chip(structural);
 
   signal Vdd, Gnd: std_logic;
   signal cpu_add, cpu_data, mem_data, mem_add: std_logic_vector(7 downto 0);

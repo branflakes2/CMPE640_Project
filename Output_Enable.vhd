@@ -30,6 +30,9 @@ architecture structural of Output_Enable is
 
     signal  n_enable    :   std_logic;
 
+    for n_en    :   invX1 use entity work.invX1(structural);
+    for tx0, tx1, tx2, tx3, tx4, tx5, tx6, tx7  : tx use entity work.tx(structural);
+
 begin
 
     n_en    :   invX1   port map(enable, n_enable);

@@ -1,0 +1,104 @@
+@(#)$CDS: LVS version 6.1.7-64b 09/27/2016 19:41 (sjfhw305) $
+
+Command line: /afs/umbc.edu/software/cadence/installs/IC617/tools.lnx86/dfII/bin/64bit/LVS -dir /afs/umbc.edu/users/b/r/brianw5/home/CMPE640/LVS -l -s -t /afs/umbc.edu/users/b/r/brianw5/home/CMPE640/LVS/layout /afs/umbc.edu/users/b/r/brianw5/home/CMPE640/LVS/schematic
+Like matching is enabled.
+Net swapping is enabled.
+Using terminal names as correspondence points.
+Compiling Diva LVS rules...
+
+    Net-list summary for /afs/umbc.edu/users/b/r/brianw5/home/CMPE640/LVS/layout/netlist
+       count
+        44              nets
+        19              terminals
+        37              pmos
+        37              nmos
+
+    Net-list summary for /afs/umbc.edu/users/b/r/brianw5/home/CMPE640/LVS/schematic/netlist
+       count
+        44              nets
+        19              terminals
+        37              pmos
+        37              nmos
+
+
+    Terminal correspondence points
+    N35       N9        col_en<0>
+    N32       N15       col_en<1>
+    N30       N14       col_en<2>
+    N28       N13       col_en<3>
+    N26       N0        gnd!
+    N43       N18       mem_add<0>
+    N41       N17       mem_add<1>
+    N39       N16       mem_add<2>
+    N37       N2        mem_add<3>
+    N34       N3        mem_add<4>
+    N31       N23       row_en<0>
+    N29       N22       row_en<1>
+    N27       N21       row_en<2>
+    N25       N20       row_en<3>
+    N42       N19       row_en<4>
+    N40       N12       row_en<5>
+    N38       N11       row_en<6>
+    N36       N10       row_en<7>
+    N33       N1        vdd!
+
+Devices in the rules but not in the netlist:
+        cap nfet pfet nmos4 pmos4
+
+The net-lists match.
+
+                             layout  schematic
+                                instances
+        un-matched              0       0      
+        rewired                 0       0      
+        size errors             0       0      
+        pruned                  0       0      
+        active                  74      74     
+        total                   74      74     
+
+                                  nets
+        un-matched              0       0      
+        merged                  0       0      
+        pruned                  0       0      
+        active                  44      44     
+        total                   44      44     
+
+                                terminals
+        un-matched              0       0      
+        matched but
+        different type          0       0      
+        total                   19      19     
+
+
+Probe files from /afs/umbc.edu/users/b/r/brianw5/home/CMPE640/LVS/schematic
+
+devbad.out:
+
+netbad.out:
+
+mergenet.out:
+
+termbad.out:
+
+prunenet.out:
+
+prunedev.out:
+
+audit.out:
+
+
+Probe files from /afs/umbc.edu/users/b/r/brianw5/home/CMPE640/LVS/layout
+
+devbad.out:
+
+netbad.out:
+
+mergenet.out:
+
+termbad.out:
+
+prunenet.out:
+
+prunedev.out:
+
+audit.out:

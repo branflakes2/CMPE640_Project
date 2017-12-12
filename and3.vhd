@@ -22,6 +22,9 @@ architecture structural of and3 is
     end component;
 
     signal o1   :   std_logic;
+    for a1  :   and2 use entity work.and2(structural);
+    for a2  :   and2 use entity work.and2(structural);
+
 
 begin
 

@@ -25,8 +25,10 @@ architecture structural of and4 is
     signal o1   :   std_logic;
     signal o2   :   std_logic;
 
+    for og1, og2, og3   :   and2 use entity work.and2(structural);
+
 begin
-    
+
     og1 :   and2 port map(in1, in2, o1);
     og2 :   and2 port map(in3, in4, o2);
     og3 :   and2 port map(o1, o2, out1);

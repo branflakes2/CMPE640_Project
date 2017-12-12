@@ -5,12 +5,10 @@ use IEEE.std_logic_1164.all;
 entity Cache_Cell_Tag is                      
     port(
         Data    :   in  std_logic_vector(2 downto 0);
-        W_En_r  :   in  std_logic; --row wr enable
         Tag_Wr  :   in  std_logic; --tag wr enable
         reset   :   in  std_logic;
         Gnd     :   in  std_logic;
         Output  :   out std_logic_vector(2 downto 0);
-        Rd_En   :   in  std_logic;  --row rd enable
         Row_En  :   in  std_logic
     ); 
 end Cache_Cell_Tag;                          
@@ -54,6 +52,9 @@ architecture structural of Cache_Cell_Tag is
 
     signal Wr_En    :   std_logic;
     signal nRd_En   :   std_logic;
+
+    for nrd :   invX1 use entity work.invX1(structural);
+    for cell0, cell1, cell2 :   Cache_Cell use entity work.Cache_Cell(structural);
 
 begin
 

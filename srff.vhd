@@ -1,5 +1,5 @@
 --
--- Entity: dff
+-- Entity: srff
 -- Architecture : structural
 -- Author: cpatel2
 --

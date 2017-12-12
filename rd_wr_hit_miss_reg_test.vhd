@@ -27,6 +27,9 @@ architecture test of rd_wr_hit_miss_reg_test is
 
     signal rd_wr, rd_wr_set_en, hit_miss, hit_miss_en, clk, reset, rd_hit, wr_hit, rd_miss, wr_miss :   std_logic;
     shared variable done    :   boolean := false;
+
+    for pm  :   rd_wr_hit_miss_reg use entity work.rd_wr_hit_miss_reg(structural);
+
 begin
 
     pm  :   rd_wr_hit_miss_reg port map(rd_wr, rd_wr_set_en, hit_miss, hit_miss_en, clk, reset, '0', open, rd_hit, wr_hit, rd_miss, wr_miss);

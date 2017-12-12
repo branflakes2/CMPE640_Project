@@ -20,6 +20,8 @@ architecture test of valid_test is
 
     signal s_s, s_r, s_Rd_En, s_Wr_En, s_q  :   std_logic   := '0';
 
+    for asdf    :   Cache_Cell_Valid use entity work.Cache_Cell_Valid(structural);
+
 begin
 
     asdf    :   Cache_Cell_Valid    port map(s_s, s_r, s_Rd_En, s_Wr_En, s_q);

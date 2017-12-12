@@ -1,0 +1,9 @@
+Entity                  Area (Microns^2)
+Cache_Block             477,921.6
+Decoder                 3,780
+Hit_Miss                2,025
+Cache_Cell_Row          60,873.12
+Cache_Cell_Data_Block   12,916.8
+Cache_Cell_Tag          4,773.6
+Cache_Cell_Valid        772.2
+Cache_Cell_Valid        1,544.4

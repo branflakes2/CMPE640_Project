@@ -12,5 +12,5 @@ end xnor2;
 
 architecture structural of xnor2 is
 begin
-    out1 <= in1 xnor in2;
+    out1 <= not (in1 xor in2);
 end structural;

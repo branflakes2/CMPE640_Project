@@ -82,7 +82,7 @@ procedure print_output is
    
 end print_output;
 
-
+for c1 : chip use entity work.chip(structural);
 
 begin
 

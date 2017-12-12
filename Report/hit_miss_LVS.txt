@@ -1,0 +1,97 @@
+@(#)$CDS: LVS version 6.1.7-64b 09/27/2016 19:41 (sjfhw305) $
+
+Command line: /afs/umbc.edu/software/cadence/installs/IC617/tools.lnx86/dfII/bin/64bit/LVS -dir /afs/umbc.edu/users/b/r/brianw5/home/CMPE640/LVS -l -s -t /afs/umbc.edu/users/b/r/brianw5/home/CMPE640/LVS/layout /afs/umbc.edu/users/b/r/brianw5/home/CMPE640/LVS/schematic
+Like matching is enabled.
+Net swapping is enabled.
+Using terminal names as correspondence points.
+Compiling Diva LVS rules...
+
+    Net-list summary for /afs/umbc.edu/users/b/r/brianw5/home/CMPE640/LVS/layout/netlist
+       count
+        35              nets
+        10              terminals
+        26              pmos
+        26              nmos
+
+    Net-list summary for /afs/umbc.edu/users/b/r/brianw5/home/CMPE640/LVS/schematic/netlist
+       count
+        35              nets
+        10              terminals
+        26              pmos
+        26              nmos
+
+
+    Terminal correspondence points
+    N26       N0        gnd!
+    N31       N2        hitmiss
+    N27       N11       tag1<0>
+    N25       N10       tag1<1>
+    N34       N9        tag1<2>
+    N32       N8        tag2<0>
+    N30       N7        tag2<1>
+    N29       N4        tag2<2>
+    N33       N3        valid
+    N28       N1        vdd!
+
+Devices in the rules but not in the netlist:
+        cap nfet pfet nmos4 pmos4
+
+The net-lists match.
+
+                             layout  schematic
+                                instances
+        un-matched              0       0      
+        rewired                 0       0      
+        size errors             0       0      
+        pruned                  0       0      
+        active                  52      52     
+        total                   52      52     
+
+                                  nets
+        un-matched              0       0      
+        merged                  0       0      
+        pruned                  0       0      
+        active                  35      35     
+        total                   35      35     
+
+                                terminals
+        un-matched              0       0      
+        matched but
+        different type          1       1      
+        total                   10      10     
+
+
+Probe files from /afs/umbc.edu/users/b/r/brianw5/home/CMPE640/LVS/schematic
+
+devbad.out:
+
+netbad.out:
+
+mergenet.out:
+
+termbad.out:
+? Terminal hitmiss's type in the schematic: output, in the layout: input
+
+prunenet.out:
+
+prunedev.out:
+
+audit.out:
+
+
+Probe files from /afs/umbc.edu/users/b/r/brianw5/home/CMPE640/LVS/layout
+
+devbad.out:
+
+netbad.out:
+
+mergenet.out:
+
+termbad.out:
+? Terminal hitmiss's type in the layout: input, in the schematic: output
+
+prunenet.out:
+
+prunedev.out:
+
+audit.out:

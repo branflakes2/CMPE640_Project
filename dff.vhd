@@ -12,8 +12,7 @@ entity dff is
 port ( 
     d   : in  std_logic;
     clk : in  std_logic;
-    q   : out std_logic;
-    qbar: out std_logic
+    q   : out std_logic
     ); 
 end dff;                          
 
@@ -24,6 +23,5 @@ begin
     begin                           
         wait until ( clk'EVENT and clk = '0' ); 
         q <= d;
-        qbar <= not d;
     end process output;            
 end structural;

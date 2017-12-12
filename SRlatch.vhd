@@ -11,10 +11,12 @@ architecture structural of SRlatch is
 begin
     p   :   process(s, r)
     begin
-        if r = '1' then 
+        if r = '1' and s /= '1' then 
             q <= '0';
-        elsif s = '1' then
+        elsif s = '1' and r /= '1' then
             q <= '1';
+        elsif s = '1' and r = '1' then
+            q <= 'U';
         end if;
     end process;
 

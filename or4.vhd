@@ -25,6 +25,8 @@ architecture structural of or4 is
     signal o1   :   std_logic;
     signal o2   :   std_logic;
 
+    for og1, og2, og3   :   or2 use entity work.or2(structural);
+
 begin
     
     og1 :   or2 port map(in1, in2, o1);

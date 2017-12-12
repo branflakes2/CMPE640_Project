@@ -27,8 +27,7 @@ architecture structural of rd_wr_hit_miss_reg is
             clk     :   in  std_logic;
             reset   :   in  std_logic;
             Gnd     :   in  std_logic;
-            q       :   out std_logic;
-            qbar    :   out std_logic
+            q       :   out std_logic
         );
     end component;
 
@@ -38,8 +37,7 @@ architecture structural of rd_wr_hit_miss_reg is
         clk     :   in  std_logic;
         reset   :   in  std_logic;
         Gnd     :   in  std_logic;
-        q       :   out std_logic;
-        qbar    :   out std_logic
+        q       :   out std_logic
     );
     end component;
 
@@ -104,6 +102,14 @@ architecture structural of rd_wr_hit_miss_reg is
     signal enabled_clk      :   std_logic;
 
     signal nreset           :   std_logic;
+
+    for inv1, inv2, n_en, nrst  :   invX1 use entity work.invX1(structural);
+    for and_1, and_2, and_3, and_4, asdf, reg1in  : and2 use entity work.and2(structural);
+    for clk_en, nrsten  :   or2 use entity work.or2(structural);
+    for reg1    :   dff_reset use entity work.dff_reset(structural);
+    for latch   :   Dlatch_Reset use entity work.Dlatch_Reset(structural);
+    
+
 begin
     
     rd_wr_o <=  latched_rd_wr;
@@ -125,7 +131,7 @@ begin
     
     reg1in  :   and2        port map(rd_wr,  rd_wr_set_en, reg1_in);
 
-    reg1    :   dff_reset   port map(reg1_in, enabled_clk, reset, Gnd, latched_rd_wr, open);
-    latch   :   Dlatch_Reset    port map(hit_miss, hit_miss_en, reset, Gnd, latched_hit_miss, open);
+    reg1    :   dff_reset   port map(reg1_in, enabled_clk, reset, Gnd, latched_rd_wr);
+    latch   :   Dlatch_Reset    port map(hit_miss, hit_miss_en, reset, Gnd, latched_hit_miss);
 
 end structural;

@@ -20,20 +20,21 @@ architecture structural of register8 is
         clk     :   in  std_logic;
         reset   :   in  std_logic;
         Gnd     :   in  std_logic;
-        q       :   out std_logic;
-        qbar    :   out std_logic
+        q       :   out std_logic
     );
     end component;
 
+    for register0, register1, register2, register3, register4, register5, register6, register7  :   dff_reset use entity work.dff_reset(structural);
+
 begin
 
-    register0   :   dff_reset port map(d(0), clk, reset, Gnd, q(0), open);
-    register1   :   dff_reset port map(d(1), clk, reset, Gnd, q(1), open);
-    register2   :   dff_reset port map(d(2), clk, reset, Gnd, q(2), open);
-    register3   :   dff_reset port map(d(3), clk, reset, Gnd, q(3), open);
-    register4   :   dff_reset port map(d(4), clk, reset, Gnd, q(4), open);
-    register5   :   dff_reset port map(d(5), clk, reset, Gnd, q(5), open);
-    register6   :   dff_reset port map(d(6), clk, reset, Gnd, q(6), open);
-    register7   :   dff_reset port map(d(7), clk, reset, Gnd, q(7), open);
+    register0   :   dff_reset port map(d(0), clk, reset, Gnd, q(0));
+    register1   :   dff_reset port map(d(1), clk, reset, Gnd, q(1));
+    register2   :   dff_reset port map(d(2), clk, reset, Gnd, q(2));
+    register3   :   dff_reset port map(d(3), clk, reset, Gnd, q(3));
+    register4   :   dff_reset port map(d(4), clk, reset, Gnd, q(4));
+    register5   :   dff_reset port map(d(5), clk, reset, Gnd, q(5));
+    register6   :   dff_reset port map(d(6), clk, reset, Gnd, q(6));
+    register7   :   dff_reset port map(d(7), clk, reset, Gnd, q(7));
 
 end structural;

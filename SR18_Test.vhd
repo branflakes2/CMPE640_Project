@@ -20,6 +20,9 @@ architecture test of SR18_Test is
     signal clk, reset   :   std_logic;
     signal output   :   std_logic_vector(0 to 17);
     shared variable done    :   boolean := false;
+
+    for pm  : SR18 use entity work.SR18(structural);
+
 begin
     
     pm  :   SR18    port map(clk, reset, '1', '0', output);

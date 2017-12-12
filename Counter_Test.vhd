@@ -52,6 +52,8 @@ architecture test of Counter_Test is
 
     shared variable done    :   boolean := false;
 
+    for asdt    :   Counter use entity work.Counter(structural);
+
 begin
 
     asdt    :   Counter port map(

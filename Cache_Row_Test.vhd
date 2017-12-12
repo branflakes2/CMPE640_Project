@@ -50,6 +50,8 @@ architecture test of Cache_Row_Test is
     signal  s_Tag_Out     :    std_logic_vector(2 downto 0);
     signal  s_Valid_Out   :    std_logic;
 
+    for row :   Cache_Cell_Row use entity work.Cache_Cell_Row(structural);
+
 begin
 
     row :   Cache_Cell_Row  port map(s_Data_In, s_Tag_In, s_Col0_Rd_En, s_Col1_Rd_En, s_Col2_Rd_En, s_Col3_Rd_En, s_Col0_Wr_En, s_Col1_Wr_En, s_Col2_Wr_En, s_Col3_Wr_En, s_Tag_Wr_En, s_Row_Rd_En, s_Row_Wr_En, '0', s_reset, s_Data_Out, s_Tag_Out, s_Valid_Out);

@@ -37,6 +37,14 @@ architecture structural of Cache_Cell_Data_Block is
     );
     end component; 
 
+    component nand2
+    port(
+        in1     :   in  std_logic;
+        in2     :   in  std_logic;
+        out1    :   out std_logic
+    );
+    end component; 
+
     component invX1
     port(
         in1     :   in  std_logic;
@@ -48,11 +56,16 @@ architecture structural of Cache_Cell_Data_Block is
     signal Wr_En    :   std_logic;
     signal nRd_En   :   std_logic;
 
+    for and_1   :   nand2 use entity work.nand2(structural);
+    for and_2   :   and2 use entity work.and2(structural);
+    for nrd     :   invX1 use entity work.invX1(structural);
+    for cell0, cell1, cell2, cell3, cell4, cell5, cell6, cell7  :   Cache_Cell use entity work.Cache_Cell(structural);
+
 begin
 
-    and_1   :   and2        port map(Rd_En_c, Rd_En_r, Rd_En);
+    and_1   :   nand2       port map(Rd_En_c, Rd_En_r, nRd_En);
     and_2   :   and2        port map(W_En_c, W_En_r, Wr_En);
-    nrd     :   invX1       port map(Rd_En, nRd_En);
+    nrd     :   invX1       port map(nRd_En, Rd_En);
 
     cell0   :   Cache_Cell  port map(Data(0), Wr_En, reset, Gnd, Output(0), Rd_En, nRd_En);
     cell1   :   Cache_Cell  port map(Data(1), Wr_En, reset, Gnd, Output(1), Rd_En, nRd_En);
