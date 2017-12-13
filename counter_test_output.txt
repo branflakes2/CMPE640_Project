@@ -1,0 +1,63 @@
+./ghdl_elab.sh counter_test
+elaborate counter_test
+./ghdl_run.sh counter_test
+ Clock: 1 CPU Hit/Miss: 0 Cpu Read/Write: Z Reset: 1
+ Busy: 0 Rd_Wr_o: 0 Cache_Write: U rm_wr_en: U wr_hit: U cpu_dout_en: 0 mem_enable: 0 write_0: U write_1: U write_2: U write_3: U
+ ----------------------------------------------
+ Clock: 2 CPU Hit/Miss: 0 Cpu Read/Write: Z Reset: 0
+ Busy: 0 Rd_Wr_o: 0 Cache_Write: 0 rm_wr_en: 0 wr_hit: 0 cpu_dout_en: 0 mem_enable: 0 write_0: 0 write_1: 0 write_2: 0 write_3: 0
+ ----------------------------------------------
+ Clock: 3 CPU Hit/Miss: 0 Cpu Read/Write: 1 Reset: 0
+ Busy: 1 Rd_Wr_o: 1 Cache_Write: 0 rm_wr_en: 0 wr_hit: 0 cpu_dout_en: 0 mem_enable: 0 write_0: 0 write_1: 0 write_2: 0 write_3: 0
+ ----------------------------------------------
+ Clock: 13 CPU Hit/Miss: 0 Cpu Read/Write: Z Reset: 0
+ Busy: 1 Rd_Wr_o: 1 Cache_Write: 1 rm_wr_en: 1 wr_hit: 0 cpu_dout_en: 0 mem_enable: 0 write_0: 1 write_1: 0 write_2: 0 write_3: 0
+ ----------------------------------------------
+ Clock: 14 CPU Hit/Miss: 0 Cpu Read/Write: Z Reset: 0
+ Busy: 1 Rd_Wr_o: 1 Cache_Write: 0 rm_wr_en: 1 wr_hit: 0 cpu_dout_en: 0 mem_enable: 0 write_0: 0 write_1: 0 write_2: 0 write_3: 0
+ ----------------------------------------------
+ Clock: 15 CPU Hit/Miss: 0 Cpu Read/Write: Z Reset: 0
+ Busy: 1 Rd_Wr_o: 1 Cache_Write: 1 rm_wr_en: 1 wr_hit: 0 cpu_dout_en: 0 mem_enable: 0 write_0: 0 write_1: 1 write_2: 0 write_3: 0
+ ----------------------------------------------
+ Clock: 16 CPU Hit/Miss: 0 Cpu Read/Write: Z Reset: 0
+ Busy: 1 Rd_Wr_o: 1 Cache_Write: 0 rm_wr_en: 1 wr_hit: 0 cpu_dout_en: 0 mem_enable: 0 write_0: 0 write_1: 0 write_2: 0 write_3: 0
+ ----------------------------------------------
+ Clock: 17 CPU Hit/Miss: 0 Cpu Read/Write: Z Reset: 0
+ Busy: 1 Rd_Wr_o: 1 Cache_Write: 1 rm_wr_en: 1 wr_hit: 0 cpu_dout_en: 0 mem_enable: 0 write_0: 0 write_1: 0 write_2: 1 write_3: 0
+ ----------------------------------------------
+ Clock: 18 CPU Hit/Miss: 0 Cpu Read/Write: Z Reset: 0
+ Busy: 1 Rd_Wr_o: 1 Cache_Write: 0 rm_wr_en: 1 wr_hit: 0 cpu_dout_en: 0 mem_enable: 0 write_0: 0 write_1: 0 write_2: 0 write_3: 0
+ ----------------------------------------------
+ Clock: 19 CPU Hit/Miss: 0 Cpu Read/Write: Z Reset: 0
+ Busy: 1 Rd_Wr_o: 1 Cache_Write: 1 rm_wr_en: 1 wr_hit: 0 cpu_dout_en: 0 mem_enable: 0 write_0: 0 write_1: 0 write_2: 0 write_3: 1
+ ----------------------------------------------
+ Clock: 20 CPU Hit/Miss: 0 Cpu Read/Write: Z Reset: 0
+ Busy: 1 Rd_Wr_o: 1 Cache_Write: 0 rm_wr_en: 1 wr_hit: 0 cpu_dout_en: 0 mem_enable: 0 write_0: 0 write_1: 0 write_2: 0 write_3: 0
+ ----------------------------------------------
+ Clock: 21 CPU Hit/Miss: 0 Cpu Read/Write: Z Reset: 0
+ Busy: 0 Rd_Wr_o: 1 Cache_Write: 0 rm_wr_en: 0 wr_hit: 0 cpu_dout_en: 1 mem_enable: 0 write_0: 0 write_1: 0 write_2: 0 write_3: 0
+ ----------------------------------------------
+ Clock: 22 CPU Hit/Miss: 0 Cpu Read/Write: 1 Reset: 0
+ Busy: 1 Rd_Wr_o: 1 Cache_Write: 0 rm_wr_en: 0 wr_hit: 0 cpu_dout_en: 0 mem_enable: 0 write_0: 0 write_1: 0 write_2: 0 write_3: 0
+ ----------------------------------------------
+ Clock: 23 CPU Hit/Miss: 1 Cpu Read/Write: Z Reset: 0
+ Busy: 0 Rd_Wr_o: 1 Cache_Write: 0 rm_wr_en: 0 wr_hit: 0 cpu_dout_en: 1 mem_enable: 0 write_0: 0 write_1: 0 write_2: 0 write_3: 0
+ ----------------------------------------------
+ Clock: 24 CPU Hit/Miss: 1 Cpu Read/Write: 0 Reset: 0
+ Busy: 1 Rd_Wr_o: 0 Cache_Write: 0 rm_wr_en: 0 wr_hit: 0 cpu_dout_en: 0 mem_enable: 0 write_0: 0 write_1: 0 write_2: 0 write_3: 0
+ ----------------------------------------------
+ Clock: 26 CPU Hit/Miss: 0 Cpu Read/Write: Z Reset: 0
+ Busy: 0 Rd_Wr_o: 0 Cache_Write: 0 rm_wr_en: 0 wr_hit: 0 cpu_dout_en: 0 mem_enable: 0 write_0: 0 write_1: 0 write_2: 0 write_3: 0
+ ----------------------------------------------
+ Clock: 27 CPU Hit/Miss: 0 Cpu Read/Write: 0 Reset: 0
+ Busy: 1 Rd_Wr_o: 0 Cache_Write: 0 rm_wr_en: 0 wr_hit: 0 cpu_dout_en: 0 mem_enable: 0 write_0: 0 write_1: 0 write_2: 0 write_3: 0
+ ----------------------------------------------
+ Clock: 29 CPU Hit/Miss: 1 Cpu Read/Write: Z Reset: 0
+ Busy: 1 Rd_Wr_o: 0 Cache_Write: 1 rm_wr_en: 0 wr_hit: 1 cpu_dout_en: 0 mem_enable: 0 write_0: 0 write_1: 0 write_2: 0 write_3: 0
+ ----------------------------------------------
+ Clock: 29 CPU Hit/Miss: 1 Cpu Read/Write: Z Reset: 0
+ Busy: 0 Rd_Wr_o: 0 Cache_Write: 1 rm_wr_en: 0 wr_hit: 1 cpu_dout_en: 0 mem_enable: 0 write_0: 0 write_1: 0 write_2: 0 write_3: 0
+ ----------------------------------------------
+ Clock: 30 CPU Hit/Miss: 0 Cpu Read/Write: Z Reset: 0
+ Busy: 0 Rd_Wr_o: 0 Cache_Write: 0 rm_wr_en: 0 wr_hit: 0 cpu_dout_en: 0 mem_enable: 0 write_0: 0 write_1: 0 write_2: 0 write_3: 0
+ ----------------------------------------------

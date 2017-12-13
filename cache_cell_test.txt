@@ -1,0 +1,56 @@
+- reset
+0
+0
+1
+0
+1
+0
+- do nothing
+0
+0
+0
+0
+1
+0
+- set data, but don't write
+1
+0
+0
+0
+1
+0
+- output data and write on rising edge
+1
+0
+0
+1
+0
+1
+- output data
+1
+0
+0
+1
+0
+0
+- output data on falling edge and pull W_En low
+0
+0
+0
+1
+0
+0
+- continue outputting data
+0
+0
+0
+1
+0
+0
+- stop outputting data
+0
+0
+0
+0
+1
+0

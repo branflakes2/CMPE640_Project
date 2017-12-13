@@ -1,0 +1,18 @@
+./ghdl_elab.sh cache_cell_tag_test
+elaborate cache_cell_tag_test
+./ghdl_run.sh cache_cell_tag_test
+ Clock: 1 Data: 000 Tag_Wr: 0 reset: 1 Row_En: 0
+ Output: ZZZ
+ ----------------------------------------------
+ Clock: 2 Data: 010 Tag_Wr: 0 reset: 0 Row_En: 1
+ Output: 000
+ ----------------------------------------------
+ Clock: 3 Data: 010 Tag_Wr: 1 reset: 0 Row_En: 1
+ Output: 010
+ ----------------------------------------------
+ Clock: 4 Data: 010 Tag_Wr: 0 reset: 0 Row_En: 1
+ Output: 010
+ ----------------------------------------------
+ Clock: 5 Data: 000 Tag_Wr: 0 reset: 0 Row_En: 0
+ Output: ZZZ
+ ----------------------------------------------

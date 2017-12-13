@@ -1,0 +1,25 @@
+-reset
+000
+0
+1
+0
+-assert data, enable row
+010
+0
+0
+1
+--write data
+010
+1
+0
+1
+--turn off write signal
+010
+0
+0
+1
+--do nothing
+000
+0
+0
+0

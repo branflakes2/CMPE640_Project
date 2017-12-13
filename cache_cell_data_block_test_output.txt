@@ -1,0 +1,18 @@
+ Clock: 1 Data: 00000000 W_En_r: 0 W_En_c: 0 Rd_En_r: 0 Rd_En_c: 0 Reset: 0
+ Output: ZZZZZZZZ
+ ----------------------------------------------
+ Clock: 2 Data: 00111100 W_En_r: 0 W_En_c: 0 Rd_En_r: 0 Rd_En_c: 0 Reset: 0
+ Output: ZZZZZZZZ
+ ----------------------------------------------
+ Clock: 3 Data: 00111100 W_En_r: 1 W_En_c: 0 Rd_En_r: 1 Rd_En_c: 1 Reset: 1
+ Output: 00000000
+ ----------------------------------------------
+ Clock: 4 Data: 00111100 W_En_r: 1 W_En_c: 1 Rd_En_r: 1 Rd_En_c: 1 Reset: 1
+ Output: 00111100
+ ----------------------------------------------
+ Clock: 5 Data: 00000000 W_En_r: 0 W_En_c: 0 Rd_En_r: 1 Rd_En_c: 1 Reset: 1
+ Output: 00111100
+ ----------------------------------------------
+ Clock: 6 Data: 00000000 W_En_r: 0 W_En_c: 0 Rd_En_r: 0 Rd_En_c: 0 Reset: 0
+ Output: ZZZZZZZZ
+ ----------------------------------------------

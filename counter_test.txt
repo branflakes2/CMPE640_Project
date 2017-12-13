@@ -1,0 +1,155 @@
+-reset 1
+0
+Z
+0
+1
+-do nothing 2
+0
+Z
+0
+0
+-read miss 3
+0
+1
+1
+0
+-wait 4
+0
+Z
+0
+0
+-wait 5
+0
+Z
+0
+0
+-wait 6
+0
+Z
+0
+0
+-wait 7
+0
+Z
+0
+0
+-wait 8
+0
+Z
+0
+0
+-wait 9
+0
+Z
+0
+0
+-wait 10
+0
+Z
+0
+0
+-wait 11
+0
+Z
+0
+0
+-wait 12
+0
+Z
+0
+0
+-wait 13
+0
+Z
+0
+0
+-wait 14
+0
+Z
+0
+0
+-wait 15
+0
+Z
+0
+0
+-wait 16
+0
+Z
+0
+0
+-wait 17
+0
+Z
+0
+0
+-wait 18
+0
+Z
+0
+0
+-wait 19
+0
+Z
+0
+0
+-wait 20
+0
+Z
+0
+0
+-wait 21
+0
+Z
+0
+0
+-read hit 22
+0
+1
+1
+0
+--read hit 23
+1
+Z
+0
+0
+--wr miss 24
+1
+0
+1
+0
+-wr miss 25
+0
+Z
+0
+0
+-wr miss 26
+0
+Z
+0
+0
+-wr hit 27
+0
+0
+1
+0
+-wr hit 28
+1
+Z
+0
+0
+wr hit 29
+1
+Z
+0
+0
+do nothing
+0
+Z
+0
+0
+do nothin
+0
+Z
+0
+0

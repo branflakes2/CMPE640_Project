@@ -1,7 +1,7 @@
 -- Entity: chip_test 
 -- Architecture : test 
--- Author: cpatel2
--- Created On: 11/01/05
+-- Author: brianw5 
+-- Created On: 12/12/2017
 --
 library IEEE;
 use IEEE.std_logic_1164.all;
