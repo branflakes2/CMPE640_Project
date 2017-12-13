@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Arch Linux) (preloaded format=pdflatex 2017.10.24)  22 NOV 2017 23:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Arch Linux) (preloaded format=pdflatex 2017.10.24)  12 DEC 2017 21:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -70,12 +70,58 @@ Package: enumitem 2011/09/28 v3.5.2 Customized lists
 \enit@inbox=\box26
 \enitdp@description=\count87
 )
-\c@longenumi=\count88
-\c@longenumii=\count89
-\c@longenumiii=\count90
-\c@longenumiv=\count91
-\c@longenumv=\count92
-\enitdp@longenum=\count93
+(/usr/share/texmf-dist/tex/latex/pdfpages/pdfpages.sty
+Package: pdfpages 2017/07/14 v0.5j Insert pages of external PDF documents (AM)
+
+(/usr/share/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(/usr/share/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count88
+\calc@Bcount=\count89
+\calc@Adimen=\dimen106
+\calc@Bdimen=\dimen107
+\calc@Askip=\skip44
+\calc@Bskip=\skip45
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count90
+\calc@Cskip=\skip46
+)
+(/usr/share/texmf-dist/tex/latex/eso-pic/eso-pic.sty
+Package: eso-pic 2015/07/21 v2.0g eso-pic (RN)
+
+(/usr/share/texmf-dist/tex/generic/oberdiek/atbegshi.sty
+Package: atbegshi 2016/06/09 v1.18 At begin shipout hook (HO)
+
+(/usr/share/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
+(/usr/share/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)
+(/usr/share/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
+)))
+\AM@pagewidth=\dimen108
+\AM@pageheight=\dimen109
+
+(/usr/share/texmf-dist/tex/latex/pdfpages/pppdftex.def
+File: pppdftex.def 2017/07/14 v0.5j Pdfpages driver for pdfTeX (AM)
+)
+\AM@pagebox=\box27
+\AM@global@opts=\toks16
+\AM@toc@title=\toks17
+\c@AM@survey=\count91
+\AM@templatesizebox=\box28
+)
+\c@longenumi=\count92
+\c@longenumii=\count93
+\c@longenumiii=\count94
+\c@longenumiv=\count95
+\c@longenumv=\count96
+\enitdp@longenum=\count97
 
 (/usr/share/texmf-dist/tex/latex/placeins/placeins.sty
 Package: placeins 2005/04/18  v 2.2
@@ -88,46 +134,40 @@ Writing index file Report.idx
 (./Report.aux)
 \openout1 = `Report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
  (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count94
-\scratchdimen=\dimen106
-\scratchbox=\box27
-\nofMPsegments=\count95
-\nofMParguments=\count96
-\everyMPshowfont=\toks16
-\MPscratchCnt=\count97
-\MPscratchDim=\dimen107
-\MPnumerator=\count98
-\makeMPintoPDFobject=\count99
-\everyMPtoPDFconversion=\toks17
+\scratchcounter=\count98
+\scratchdimen=\dimen110
+\scratchbox=\box29
+\nofMPsegments=\count99
+\nofMParguments=\count100
+\everyMPshowfont=\toks18
+\MPscratchCnt=\count101
+\MPscratchDim=\dimen111
+\MPnumerator=\count102
+\makeMPintoPDFobject=\count103
+\everyMPtoPDFconversion=\toks19
 ) (/usr/share/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
-(/usr/share/texmf-dist/tex/generic/oberdiek/infwarerr.sty
-Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
-)
 (/usr/share/texmf-dist/tex/latex/oberdiek/grfext.sty
 Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
 
 (/usr/share/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
 Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
-
-(/usr/share/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
-Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
-)))
+))
 (/usr/share/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 
@@ -149,10 +189,6 @@ Package etexcmds Info: Could not find \expanded.
 (/usr/share/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2017/03/19 v0.25 Utility functions of pdfTeX for LuaTeX (HO
 )
-
-(/usr/share/texmf-dist/tex/generic/oberdiek/ifpdf.sty
-Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
-)
 Package pdftexcmds Info: LuaTeX not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
@@ -168,155 +204,270 @@ G,.JBIG2,.JB2,.eps]
 (/usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
+))
+\AtBeginShipoutBox=\box30
+
+(/usr/share/texmf-dist/tex/latex/oberdiek/pdflscape.sty
+Package: pdflscape 2016/05/14 v0.11 Display of landscape pages in PDF (HO)
+
+(/usr/share/texmf-dist/tex/latex/graphics/lscape.sty
+Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
+)
+Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
+
+(/usr/share/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )) [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./Report.toc
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 5.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 5.
-)
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./Report.toc)
 \tf@toc=\write4
 \openout4 = `Report.toc'.
 
- [1] [2]
-<chiprm.png, id=17, 755.82375pt x 205.5178pt>
+
+
+LaTeX Warning: Reference `chiprm' on page 1 undefined on input line 116.
+
+
+LaTeX Warning: Reference `chiprh' on page 1 undefined on input line 117.
+
+
+LaTeX Warning: Reference `chipwm' on page 1 undefined on input line 121.
+
+
+LaTeX Warning: Reference `chipwh' on page 1 undefined on input line 121.
+
+
+LaTeX Warning: Reference `chiphd' on page 1 undefined on input line 122.
+
+[1]
+<chiprm.png, id=13, 755.82375pt x 205.5178pt>
 File: chiprm.png Graphic file (type png)
 <use chiprm.png>
-Package pdftex.def Info: chiprm.png  used on input line 136. on input line 136.
+Package pdftex.def Info: chiprm.png  used on input line 131. on input line 131.
 
-Package pdftex.def Info: Requested size: 345.0pt x 93.80865pt on input line 136
+Package pdftex.def Info: Requested size: 345.0pt x 93.80865pt on input line 131
 .
-<chiprh.png, id=18, 752.0597pt x 210.03468pt>
+<chiprh.png, id=14, 752.0597pt x 210.03468pt>
 File: chiprh.png Graphic file (type png)
 <use chiprh.png>
-Package pdftex.def Info: chiprh.png  used on input line 143. on input line 143.
+Package pdftex.def Info: chiprh.png  used on input line 138. on input line 138.
 
-Package pdftex.def Info: Requested size: 345.0pt x 96.35432pt on input line 143
+Package pdftex.def Info: Requested size: 345.0pt x 96.35432pt on input line 138
 .
-<chipwm.png, id=19, 752.8125pt x 211.54031pt>
+<chipwm.png, id=15, 752.8125pt x 211.54031pt>
 File: chipwm.png Graphic file (type png)
 <use chipwm.png>
-Package pdftex.def Info: chipwm.png  used on input line 149. on input line 149.
+Package pdftex.def Info: chipwm.png  used on input line 144. on input line 144.
 
-Package pdftex.def Info: Requested size: 345.0pt x 96.9482pt on input line 149.
+Package pdftex.def Info: Requested size: 345.0pt x 96.9482pt on input line 144.
 
-<chipwh.png, id=20, 758.835pt x 208.52907pt>
+<chipwh.png, id=16, 758.835pt x 208.52907pt>
 File: chipwh.png Graphic file (type png)
 <use chipwh.png>
-Package pdftex.def Info: chipwh.png  used on input line 155. on input line 155.
+Package pdftex.def Info: chipwh.png  used on input line 150. on input line 150.
 
-Package pdftex.def Info: Requested size: 345.0pt x 94.80768pt on input line 155
+Package pdftex.def Info: Requested size: 345.0pt x 94.80768pt on input line 150
 .
-<chd.png, id=21, 733.74126pt x 596.2275pt>
+<chd.png, id=17, 733.74126pt x 596.2275pt>
 File: chd.png Graphic file (type png)
 <use chd.png>
-Package pdftex.def Info: chd.png  used on input line 162. on input line 162.
-Package pdftex.def Info: Requested size: 345.0pt x 280.34523pt on input line 16
-2.
- [3 <./chiprm.png (PNG copy)> <./chiprh.png (PNG copy)> <./chipwm.png (PNG copy
-)>] [4 <./chipwh.png (PNG copy)> <./chd.png>]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 183.
+Package pdftex.def Info: chd.png  used on input line 157. on input line 157.
+Package pdftex.def Info: Requested size: 345.0pt x 280.34523pt on input line 15
+7.
+<chip.pdf, id=19, pagebox=cropbox, 794.97pt x 614.295pt>
+File: chip.pdf Graphic file (type pdf)
+<use chip.pdf>
+Package pdftex.def Info: chip.pdf  used on input line 162. on input line 162.
+Package pdftex.def Info: Requested size: 794.96806pt x 614.29349pt on input lin
+e 162.
+File: chip.pdf Graphic file (type pdf)
+<use chip.pdf>
+Package pdftex.def Info: chip.pdf  used on input line 162. on input line 162.
+Package pdftex.def Info: Requested size: 794.96806pt x 614.29349pt on input lin
+e 162.
+<chip.pdf, id=22, page=1, pagebox=cropbox, 794.97pt x 614.295pt>
+File: chip.pdf Graphic file (type pdf)
+<use chip.pdf, page 1>
+Package pdftex.def Info: chip.pdf , page1 used on input line 162. on input line
+ 162.
+Package pdftex.def Info: Requested size: 794.96806pt x 614.29349pt on input lin
+e 162.
+File: chip.pdf Graphic file (type pdf)
+<use chip.pdf, page 1>
+Package pdftex.def Info: chip.pdf , page1 used on input line 162. on input line
+ 162.
+Package pdftex.def Info: Requested size: 795.3441pt x 614.58406pt on input line
+ 162.
+ [2]
+File: chip.pdf Graphic file (type pdf)
+<use chip.pdf, page 1>
+Package pdftex.def Info: chip.pdf , page1 used on input line 162. on input line
+ 162.
+Package pdftex.def Info: Requested size: 795.3441pt x 614.58406pt on input line
+ 162.
+File: chip.pdf Graphic file (type pdf)
+<use chip.pdf, page 1>
+Package pdftex.def Info: chip.pdf , page1 used on input line 162. on input line
+ 162.
+Package pdftex.def Info: Requested size: 795.3441pt x 614.58406pt on input line
+ 162.
+File: chip.pdf Graphic file (type pdf)
+<use chip.pdf, page 1>
+Package pdftex.def Info: chip.pdf , page1 used on input line 162. on input line
+ 162.
+Package pdftex.def Info: Requested size: 795.3441pt x 614.58406pt on input line
+ 162.
+ [3 <./chip.pdf, page is rotated 90 degrees>] [4 <./chiprm.png (PNG copy)> <./c
+hiprh.png (PNG copy)> <./chipwm.png (PNG copy)> <./chipwh.png (PNG copy)>] [5 <
+./chd.png>]
 
- (/usr/share/texmf-dist/tex/latex/base/omscmr.fd
+LaTeX Warning: Reference `crdmiss' on page 6 undefined on input line 173.
+
+
+LaTeX Warning: Reference `crdhit' on page 6 undefined on input line 173.
+
+
+LaTeX Warning: Reference `cwrmiss' on page 6 undefined on input line 173.
+
+
+LaTeX Warning: Reference `cwrhit' on page 6 undefined on input line 173.
+
+
+LaTeX Warning: Reference `sd' on page 6 undefined on input line 175.
+
+
+LaTeX Warning: Reference `state' on page 6 undefined on input line 175.
+
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 180.
+
+(/usr/share/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 183.
-<crm.png, id=30, 636.87938pt x 294.34969pt>
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 180.
+
+Overfull \hbox (3.13397pt too wide) in paragraph at lines 188--190
+[]\OT1/cmr/m/n/10 s[]-hit[]-miss: (In-put) The sig-nal from the Hit[]-Miss mod-
+ule in-di-cat-ing whether
+ []
+
+<crm.png, id=45, 636.87938pt x 294.34969pt>
 File: crm.png Graphic file (type png)
 <use crm.png>
-Package pdftex.def Info: crm.png  used on input line 207. on input line 207.
-Package pdftex.def Info: Requested size: 345.0pt x 159.4495pt on input line 207
+Package pdftex.def Info: crm.png  used on input line 205. on input line 205.
+Package pdftex.def Info: Requested size: 345.0pt x 159.4495pt on input line 205
 .
-<crh.png, id=31, 757.32938pt x 286.82156pt>
+<crh.png, id=46, 757.32938pt x 286.82156pt>
 File: crh.png Graphic file (type png)
 <use crh.png>
-Package pdftex.def Info: crh.png  used on input line 214. on input line 214.
+Package pdftex.def Info: crh.png  used on input line 212. on input line 212.
 Package pdftex.def Info: Requested size: 345.0pt x 130.66156pt on input line 21
-4.
-<cwm.png, id=32, 709.14937pt x 289.08pt>
+2.
+<cwm.png, id=47, 709.14937pt x 289.08pt>
 File: cwm.png Graphic file (type png)
 <use cwm.png>
-Package pdftex.def Info: cwm.png  used on input line 221. on input line 221.
-Package pdftex.def Info: Requested size: 345.0pt x 140.6403pt on input line 221
+Package pdftex.def Info: cwm.png  used on input line 219. on input line 219.
+Package pdftex.def Info: Requested size: 345.0pt x 140.6403pt on input line 219
 .
-<cwh.png, id=33, 711.4078pt x 293.59688pt>
+<cwh.png, id=48, 711.4078pt x 293.59688pt>
 File: cwh.png Graphic file (type png)
 <use cwh.png>
-Package pdftex.def Info: cwh.png  used on input line 228. on input line 228.
+Package pdftex.def Info: cwh.png  used on input line 226. on input line 226.
 Package pdftex.def Info: Requested size: 345.0pt x 142.38535pt on input line 22
-8.
-<sd.png, id=34, 673.51625pt x 511.9125pt>
+6.
+<sd.png, id=49, 673.51625pt x 511.9125pt>
 File: sd.png Graphic file (type png)
 <use sd.png>
-Package pdftex.def Info: sd.png  used on input line 235. on input line 235.
+Package pdftex.def Info: sd.png  used on input line 233. on input line 233.
 Package pdftex.def Info: Requested size: 345.0pt x 262.22015pt on input line 23
-5.
-<state.png, id=35, 612.2875pt x 563.10374pt>
+3.
+<state.png, id=50, 612.2875pt x 563.10374pt>
 File: state.png Graphic file (type png)
 <use state.png>
-Package pdftex.def Info: state.png  used on input line 242. on input line 242.
+Package pdftex.def Info: state.png  used on input line 240. on input line 240.
 Package pdftex.def Info: Requested size: 345.0pt x 317.28639pt on input line 24
-2.
+0.
 
-[5]
+LaTeX Warning: Reference `rwhm' on page 6 undefined on input line 252.
 
-LaTeX Warning: Text page 6 contains only floats.
+[6]
 
-[6 <./crm.png (PNG copy)> <./crh.png (PNG copy)> <./cwm.png (PNG copy)>]
-[7 <./cwh.png (PNG copy)> <./sd.png>]
-<rwhm.png, id=48, 757.32938pt x 225.84375pt>
+LaTeX Warning: Text page 7 contains only floats.
+
+[7 <./crm.png (PNG copy)> <./crh.png (PNG copy)> <./cwm.png (PNG copy)>]
+[8 <./cwh.png (PNG copy)> <./sd.png>]
+<rwhm.png, id=63, 757.32938pt x 225.84375pt>
 File: rwhm.png Graphic file (type png)
 <use rwhm.png>
-Package pdftex.def Info: rwhm.png  used on input line 259. on input line 259.
+Package pdftex.def Info: rwhm.png  used on input line 257. on input line 257.
 Package pdftex.def Info: Requested size: 345.0pt x 102.88312pt on input line 25
-9.
-<sr18.png, id=49, 758.835pt x 84.315pt>
+7.
+
+
+LaTeX Warning: Reference `sr18' on page 9 undefined on input line 266.
+
+<sr18.png, id=64, 758.835pt x 84.315pt>
 File: sr18.png Graphic file (type png)
 <use sr18.png>
-Package pdftex.def Info: sr18.png  used on input line 272. on input line 272.
-Package pdftex.def Info: Requested size: 345.0pt x 38.33377pt on input line 272
+Package pdftex.def Info: sr18.png  used on input line 270. on input line 270.
+Package pdftex.def Info: Requested size: 345.0pt x 38.33377pt on input line 270
 .
- [8 <./state.png>] [9 <./rwhm.png (PNG copy)> <./sr18.png (PNG copy)>]
-<cb.png, id=57, 758.835pt x 207.02344pt>
+[9 <./state.png>]
+
+LaTeX Warning: Reference `cb' on page 10 undefined on input line 291.
+
+[10 <./rwhm.png (PNG copy)> <./sr18.png (PNG copy)>]
+<cb.png, id=72, 758.835pt x 207.02344pt>
 File: cb.png Graphic file (type png)
 <use cb.png>
-Package pdftex.def Info: cb.png  used on input line 319. on input line 319.
-Package pdftex.def Info: Requested size: 345.0pt x 94.12314pt on input line 319
+Package pdftex.def Info: cb.png  used on input line 317. on input line 317.
+Package pdftex.def Info: Requested size: 345.0pt x 94.12314pt on input line 317
 .
-<d.png, id=58, 754.31813pt x 77.53969pt>
+
+
+LaTeX Warning: Reference `d' on page 11 undefined on input line 325.
+
+<d.png, id=73, 754.31813pt x 77.53969pt>
 File: d.png Graphic file (type png)
 <use d.png>
-Package pdftex.def Info: d.png  used on input line 331. on input line 331.
-Package pdftex.def Info: Requested size: 345.0pt x 35.46399pt on input line 331
+Package pdftex.def Info: d.png  used on input line 329. on input line 329.
+Package pdftex.def Info: Requested size: 345.0pt x 35.46399pt on input line 329
 .
-<hm.png, id=59, 757.32938pt x 100.87688pt>
+
+LaTeX Warning: Reference `hm' on page 11 undefined on input line 342.
+
+<hm.png, id=74, 757.32938pt x 100.87688pt>
 File: hm.png Graphic file (type png)
 <use hm.png>
-Package pdftex.def Info: hm.png  used on input line 347. on input line 347.
-Package pdftex.def Info: Requested size: 345.0pt x 45.95445pt on input line 347
+Package pdftex.def Info: hm.png  used on input line 345. on input line 345.
+Package pdftex.def Info: Requested size: 345.0pt x 45.95445pt on input line 345
 .
- [10 <./cb.png (PNG copy)> <./d.png (PNG copy)>]
-[11 <./hm.png (PNG copy)>] (./Report.aux) ) 
+[11 <./cb.png (PNG copy)> <./d.png (PNG copy)>] [12 <./hm.png (PNG copy)>]
+(./Report.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
- 1950 strings out of 492990
- 28069 string characters out of 6138687
- 91153 words of memory out of 5000000
- 5481 multiletter control sequences out of 15000+600000
+ 2803 strings out of 492990
+ 41697 string characters out of 6138687
+ 107311 words of memory out of 5000000
+ 6300 multiletter control sequences out of 15000+600000
  5457 words of font info for 20 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,7n,25p,273b,561s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb>
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmsy10.pfb>
-Output written on Report.pdf (12 pages, 438739 bytes).
+ 41i,18n,43p,273b,563s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+r17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on Report.pdf (13 pages, 433502 bytes).
 PDF statistics:
- 87 PDF objects out of 1000 (max. 8388607)
- 47 compressed objects within 1 object stream
+ 103 PDF objects out of 1000 (max. 8388607)
+ 58 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 81 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 101 words of extra memory for PDF output out of 10000 (max. 10000000)
 

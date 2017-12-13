@@ -1,10 +1,10 @@
 \contentsline {section}{\numberline {1}Current Status of Code (Read Me)}{1}
 \contentsline {section}{\numberline {2}Entity Hierarchy}{1}
 \contentsline {section}{\numberline {3}Chip}{2}
-\contentsline {section}{\numberline {4}Counter (State Machine)}{5}
-\contentsline {subsection}{\numberline {4.1}rd_wr_hit_miss_reg}{7}
-\contentsline {subsection}{\numberline {4.2}SR18}{8}
-\contentsline {section}{\numberline {5}Cache_Block}{9}
-\contentsline {section}{\numberline {6}Decoder}{10}
-\contentsline {section}{\numberline {7}Hit Miss}{11}
-\contentsline {section}{\numberline {8}Register8 and OutputEnable}{11}
+\contentsline {section}{\numberline {4}Counter (State Machine)}{6}
+\contentsline {subsection}{\numberline {4.1}rd_wr_hit_miss_reg}{8}
+\contentsline {subsection}{\numberline {4.2}SR18}{9}
+\contentsline {section}{\numberline {5}Cache_Block}{10}
+\contentsline {section}{\numberline {6}Decoder}{11}
+\contentsline {section}{\numberline {7}Hit Miss}{12}
+\contentsline {section}{\numberline {8}Register8 and OutputEnable}{12}

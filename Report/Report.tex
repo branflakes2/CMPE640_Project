@@ -5,6 +5,7 @@
 \usepackage{graphicx}
 \usepackage{underscore}
 \usepackage{enumitem}
+\usepackage{pdfpages}
 \newlist{longenum}{enumerate}{5}
 \setlist[longenum,1]{label=\roman*)}
 \setlist[longenum,2]{label=\alph*)}
@@ -20,7 +21,7 @@
 \vfill
 \flushleft
 \large{
-Project Part 1\\
+Final Project\\
 }
 \vfill
 Name: Brian Weber\\
@@ -41,21 +42,10 @@ Comments to student:\\
 \tableofcontents
     \section{Current Status of Code (Read Me)}
         Before getting into the bulk of the report I would like to write a short
-summary of the status of my code. In it's current state, it works completely and
-matches both test benches posted on Dr. Patel's website, with one small
-exception: in the beginning of test bench 2, reset has to be asserted for an
-extra clock cycle in order to reset the valid cells correctly. In addition, I
-did not have time to clean up my code very much, so it is currently pretty
-messy. I expect there are many floating signals and unused inputs/outputs of
-entities that were abandoned as I rushed to fix bugs. I also have not
-optimized most of my logic for cmos at this point. My first goal was to get the
-code working, then polish later, but as it turns out, I didn't have any time for
-polishing. To test, I have been hard coding timings into test benches, and
-looking at the wave outputs. I do not have time to write different test benches,
-so I will not have sample input and output files. Instead, I will include the
-test benches that I have, along with the figures of the correct timing outputs.
-I got too caught up in trying to make it work perfectly, and ran out of time to
-do a good job on the report.
+summary of the status of my code. Based on my tests, everything works
+completely, and every layout LVS matches. Every entity that a layout was made
+for was optimized slightly for CMOS. State machine modules are still suboptimal,
+but work.
 \section{Entity Hierarchy}
     All entities are paired with architecture "structural".
     \begin{longenum}
@@ -131,6 +121,11 @@ and the new value should be available one cycle after busy goes low. Figures
 \ref{chipwm} and \ref{chipwh} show a write miss and a write hit respectively. An
 overall view of the chip is shown in Figure \ref{chiphd}.
 
+I placed a lot of my logic that decides what and when to write within the
+Cache_Cells and rows. This increases size, but simplifies design as the output
+of the logic will have a much lower fanout, and therefore lower load. This
+allowed me to not need to worry about parasitic capacitances as much. 
+
 \begin{figure}
     \centering
     \includegraphics[width=\textwidth]{chiprm.png}
@@ -164,6 +159,9 @@ overall view of the chip is shown in Figure \ref{chiphd}.
     \label{chiphd}
 \end{figure}
 
+\includepdf[pages=-, landscape=true]{chip.pdf}
+\newpage
+\newpage
 \section{Counter (State Machine)}
         The state machine is an entity called Counter, which is centered around
 a shift register that keeps track of the number of clocks that pass after the
