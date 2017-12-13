@@ -1,0 +1,30 @@
+-reset
+0
+1
+0
+0
+-do nothing
+0
+0
+0
+0
+-set
+1
+0
+0
+0
+-enable write
+1
+0
+0
+1
+-enable output
+0
+0
+1
+0
+-reset
+0
+1
+1
+0

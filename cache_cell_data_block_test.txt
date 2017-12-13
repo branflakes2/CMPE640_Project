@@ -1,0 +1,42 @@
+-reset
+00000000
+0
+0
+1
+0
+0
+-data
+00111100
+0
+0
+0
+0
+0
+-write row enable
+00111100
+1
+0
+0
+1
+1
+-write column enable
+00111100
+1
+1
+0
+1
+1
+-write signals off
+00000000
+0
+0
+0
+1
+1
+-do nothing
+00000000
+0
+0
+0
+0
+0

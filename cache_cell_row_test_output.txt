@@ -1,0 +1,63 @@
+./ghdl_elab.sh cache_cell_row_test
+elaborate cache_cell_row_test
+./ghdl_run.sh cache_cell_row_test
+ Clock: 1 Data_In: 00000000 Tag_In: 000 Set_Valid: 0
+ Col0_Rd_En: 0 Col1_Rd_En: 0 Col2_Rd_En: 0 Col3_Rd_En: 0 Col0_Wr_En: 0 Col1_Wr_En: 0 Col2_Wr_En: 0 Col3_Wr_En: 0
+ Tag_Wr_En: 0 Row_Rd_En: 0 Row_Wr_En: 0 Row_En: 0 reset: 1
+ Data_Out: ZZZZZZZZ Tag_Out: ZZZ Valid_Out: Z
+ ----------------------------------------------
+ Clock: 2 Data_In: 00000000 Tag_In: 101 Set_Valid: 1
+ Col0_Rd_En: 0 Col1_Rd_En: 0 Col2_Rd_En: 0 Col3_Rd_En: 0 Col0_Wr_En: 0 Col1_Wr_En: 0 Col2_Wr_En: 0 Col3_Wr_En: 0
+ Tag_Wr_En: 0 Row_Rd_En: 0 Row_Wr_En: 0 Row_En: 0 reset: 0
+ Data_Out: ZZZZZZZZ Tag_Out: ZZZ Valid_Out: Z
+ ----------------------------------------------
+ Clock: 3 Data_In: 00111100 Tag_In: 101 Set_Valid: 1
+ Col0_Rd_En: 0 Col1_Rd_En: 0 Col2_Rd_En: 0 Col3_Rd_En: 0 Col0_Wr_En: 0 Col1_Wr_En: 0 Col2_Wr_En: 0 Col3_Wr_En: 0
+ Tag_Wr_En: 1 Row_Rd_En: 1 Row_Wr_En: 1 Row_En: 1 reset: 0
+ Data_Out: ZZZZZZZZ Tag_Out: 101 Valid_Out: 1
+ ----------------------------------------------
+ Clock: 4 Data_In: 00111100 Tag_In: 000 Set_Valid: 0
+ Col0_Rd_En: 0 Col1_Rd_En: 0 Col2_Rd_En: 0 Col3_Rd_En: 0 Col0_Wr_En: 1 Col1_Wr_En: 0 Col2_Wr_En: 0 Col3_Wr_En: 0
+ Tag_Wr_En: 0 Row_Rd_En: 0 Row_Wr_En: 1 Row_En: 1 reset: 0
+ Data_Out: ZZZZZZZZ Tag_Out: 101 Valid_Out: 1
+ ----------------------------------------------
+ Clock: 5 Data_In: 11000011 Tag_In: 000 Set_Valid: 0
+ Col0_Rd_En: 0 Col1_Rd_En: 0 Col2_Rd_En: 0 Col3_Rd_En: 0 Col0_Wr_En: 0 Col1_Wr_En: 1 Col2_Wr_En: 0 Col3_Wr_En: 0
+ Tag_Wr_En: 0 Row_Rd_En: 0 Row_Wr_En: 1 Row_En: 1 reset: 0
+ Data_Out: ZZZZZZZZ Tag_Out: 101 Valid_Out: 1
+ ----------------------------------------------
+ Clock: 6 Data_In: 10000001 Tag_In: 000 Set_Valid: 0
+ Col0_Rd_En: 0 Col1_Rd_En: 0 Col2_Rd_En: 0 Col3_Rd_En: 0 Col0_Wr_En: 0 Col1_Wr_En: 0 Col2_Wr_En: 1 Col3_Wr_En: 0
+ Tag_Wr_En: 0 Row_Rd_En: 0 Row_Wr_En: 1 Row_En: 1 reset: 0
+ Data_Out: ZZZZZZZZ Tag_Out: 101 Valid_Out: 1
+ ----------------------------------------------
+ Clock: 7 Data_In: 00000011 Tag_In: 000 Set_Valid: 0
+ Col0_Rd_En: 0 Col1_Rd_En: 0 Col2_Rd_En: 0 Col3_Rd_En: 0 Col0_Wr_En: 0 Col1_Wr_En: 0 Col2_Wr_En: 0 Col3_Wr_En: 1
+ Tag_Wr_En: 0 Row_Rd_En: 0 Row_Wr_En: 1 Row_En: 1 reset: 0
+ Data_Out: ZZZZZZZZ Tag_Out: 101 Valid_Out: 1
+ ----------------------------------------------
+ Clock: 8 Data_In: 00000000 Tag_In: 000 Set_Valid: 0
+ Col0_Rd_En: 1 Col1_Rd_En: 0 Col2_Rd_En: 0 Col3_Rd_En: 0 Col0_Wr_En: 0 Col1_Wr_En: 0 Col2_Wr_En: 0 Col3_Wr_En: 0
+ Tag_Wr_En: 0 Row_Rd_En: 1 Row_Wr_En: 0 Row_En: 1 reset: 0
+ Data_Out: 00111100 Tag_Out: 101 Valid_Out: 1
+ ----------------------------------------------
+ Clock: 9 Data_In: 00000000 Tag_In: 000 Set_Valid: 0
+ Col0_Rd_En: 0 Col1_Rd_En: 1 Col2_Rd_En: 0 Col3_Rd_En: 0 Col0_Wr_En: 0 Col1_Wr_En: 0 Col2_Wr_En: 0 Col3_Wr_En: 0
+ Tag_Wr_En: 0 Row_Rd_En: 1 Row_Wr_En: 0 Row_En: 1 reset: 0
+ Data_Out: 11000011 Tag_Out: 101 Valid_Out: 1
+ ----------------------------------------------
+ Clock: 10 Data_In: 00000000 Tag_In: 000 Set_Valid: 0
+ Col0_Rd_En: 0 Col1_Rd_En: 0 Col2_Rd_En: 1 Col3_Rd_En: 0 Col0_Wr_En: 0 Col1_Wr_En: 0 Col2_Wr_En: 0 Col3_Wr_En: 0
+ Tag_Wr_En: 0 Row_Rd_En: 1 Row_Wr_En: 0 Row_En: 1 reset: 0
+ Data_Out: 10000001 Tag_Out: 101 Valid_Out: 1
+ ----------------------------------------------
+ Clock: 11 Data_In: 00000000 Tag_In: 000 Set_Valid: 0
+ Col0_Rd_En: 0 Col1_Rd_En: 0 Col2_Rd_En: 0 Col3_Rd_En: 1 Col0_Wr_En: 0 Col1_Wr_En: 0 Col2_Wr_En: 0 Col3_Wr_En: 0
+ Tag_Wr_En: 0 Row_Rd_En: 1 Row_Wr_En: 0 Row_En: 1 reset: 0
+ Data_Out: 00000011 Tag_Out: 101 Valid_Out: 1
+ ----------------------------------------------
+ Clock: 12 Data_In: 00000000 Tag_In: 000 Set_Valid: 0
+ Col0_Rd_En: 0 Col1_Rd_En: 0 Col2_Rd_En: 0 Col3_Rd_En: 0 Col0_Wr_En: 0 Col1_Wr_En: 0 Col2_Wr_En: 0 Col3_Wr_En: 0
+ Tag_Wr_En: 0 Row_Rd_En: 0 Row_Wr_En: 0 Row_En: 0 reset: 0
+ Data_Out: ZZZZZZZZ Tag_Out: ZZZ Valid_Out: Z
+ ----------------------------------------------

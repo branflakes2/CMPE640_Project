@@ -1,0 +1,54 @@
+ Clock: 0 Data: U W_En: U Reset: U Rd_En: U nRd_En: U
+ Output: Z
+ ----------------------------------------------
+ Clock: 0 Data: 0 W_En: 0 Reset: 1 Rd_En: 0 nRd_En: 1
+ Output: Z
+ ----------------------------------------------
+ Clock: 1 Data: 0 W_En: 0 Reset: 1 Rd_En: 0 nRd_En: 1
+ Output: Z
+ ----------------------------------------------
+ Clock: 1 Data: 0 W_En: 0 Reset: 0 Rd_En: 0 nRd_En: 1
+ Output: Z
+ ----------------------------------------------
+ Clock: 2 Data: 0 W_En: 0 Reset: 0 Rd_En: 0 nRd_En: 1
+ Output: Z
+ ----------------------------------------------
+ Clock: 2 Data: 1 W_En: 0 Reset: 0 Rd_En: 0 nRd_En: 1
+ Output: Z
+ ----------------------------------------------
+ Clock: 3 Data: 1 W_En: 0 Reset: 0 Rd_En: 0 nRd_En: 1
+ Output: Z
+ ----------------------------------------------
+ Clock: 3 Data: 1 W_En: 0 Reset: 0 Rd_En: 1 nRd_En: 0
+ Output: 0
+ ----------------------------------------------
+ Clock: 4 Data: 1 W_En: 1 Reset: 0 Rd_En: 1 nRd_En: 0
+ Output: 1
+ ----------------------------------------------
+ Clock: 4 Data: 1 W_En: 0 Reset: 0 Rd_En: 1 nRd_En: 0
+ Output: 1
+ ----------------------------------------------
+ Clock: 5 Data: 1 W_En: 0 Reset: 0 Rd_En: 1 nRd_En: 0
+ Output: 1
+ ----------------------------------------------
+ Clock: 5 Data: 0 W_En: 0 Reset: 0 Rd_En: 1 nRd_En: 0
+ Output: 1
+ ----------------------------------------------
+ Clock: 6 Data: 0 W_En: 0 Reset: 0 Rd_En: 1 nRd_En: 0
+ Output: 1
+ ----------------------------------------------
+ Clock: 6 Data: 0 W_En: 0 Reset: 0 Rd_En: 1 nRd_En: 0
+ Output: 1
+ ----------------------------------------------
+ Clock: 7 Data: 0 W_En: 0 Reset: 0 Rd_En: 1 nRd_En: 0
+ Output: 1
+ ----------------------------------------------
+ Clock: 7 Data: 0 W_En: 0 Reset: 0 Rd_En: 0 nRd_En: 1
+ Output: Z
+ ----------------------------------------------
+ Clock: 8 Data: 0 W_En: 0 Reset: 0 Rd_En: 0 nRd_En: 1
+ Output: Z
+ ----------------------------------------------
+ Clock: 8 Data: 0 W_En: 0 Reset: 0 Rd_En: 0 nRd_En: 1
+ Output: Z
+ ----------------------------------------------
