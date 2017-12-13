@@ -1,4 +1,7 @@
 v 4
+file . "hit_miss_test.vhd" "2c6fdff99ea1c99f9d8ced69991a551ac1fd0b41" "20171213014522.184":
+  entity hit_miss_test at 1( 0) + 0 on 4101;
+  architecture test of hit_miss_test at 11( 153) + 0 on 4102;
 file . "cache_cell_data_block_test.vhd" "a004fe388542d66f1a6c862a39de58c8a153ad4b" "20171212221551.264":
   entity cache_cell_data_block_test at 6( 97) + 0 on 3997;
 file . "cache_cell_test.vhd" "c060af73a9a251c6fb7565c15507e2d833670752" "20171212201335.693":
@@ -103,9 +106,6 @@ file . "dff.vhd" "2db627dc856af60609022519cae9f8a0e2011287" "20171212234016.254"
 file . "Dlatch_Test.vhd" "41bd7fd26f6e918dbd97b9e86538cbae3bf9f73e" "20171212200159.297":
   entity dlatch_test at 1( 0) + 0 on 3897;
   architecture test of dlatch_test at 11( 149) + 0 on 3898;
-file . "Hit_Miss_Test.vhd" "08c4f68d1853480e3533f620cf80479123b3a8f4" "20171212200159.335":
-  entity hit_miss_test at 1( 0) + 0 on 3901;
-  architecture test of hit_miss_test at 9( 102) + 0 on 3902;
 file . "invX1.vhd" "a2aafd4589b70f942f30f1b1ad71489b6089f4ac" "20171212200817.957":
   entity invx1 at 1( 0) + 0 on 3955;
   architecture structural of invx1 at 12( 155) + 0 on 3956;

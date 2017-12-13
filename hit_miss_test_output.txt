@@ -1,0 +1,3 @@
+tag1: 000 tag2: 000 valid: 0 hit_miss: 0
+tag1: 001 tag2: 001 valid: 1 hit_miss: 1
+tag1: 010 tag2: 001 valid: 1 hit_miss: 0
